@@ -1,0 +1,63 @@
+.login-container-page{
+    height: 75%;
+    display: flex;
+    padding:20px;
+    background: repeating-linear-gradient( 135deg, transparent, transparent 10px, #f0f0f0 10px, #f4f4f4 20px ), linear-gradient( #fdfdfd , #fff );
+}
+.login-container{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    width:350px;
+    background: white;
+    border-radius: 10px;
+}
+.login-header-container{
+    background-color: var(--primary);
+    background-image: -webkit-linear-gradient(330deg, var(--primary) 85%, var(--secondary) 15%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0px;
+    border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.login-form-container{
+    margin: 25px 0;
+}
+.login-form-container > form > input[type="text"],
+.login-form-container > form > input[type="password"]{
+    background-color: #eee;
+    padding: 8px 8px;
+    color: black;
+    display: flex;
+    margin: 20px auto;
+    border: none;
+    width: 70%;
+    min-width: 275px;
+    border: 2px solid #e1e1e1;
+    border-radius:4px;
+}
+.login-form-container > form > input[type="submit"]{
+    background-color: var(--secondary);
+  padding: 8px 20px;
+  margin: 25px auto;
+  display: flex;
+  border: 3px outset var(--primary);
+    font-weight: bold;
+    color: white;
+  border-radius: 10px;
+  font-size: 10px;
+}
+.login-form-container > form > input[type="submit"]:hover{
+  border: 3px inset var(--primary);
+}
+.checkbox-container{
+  margin: 10px auto;
+  width: 70%;
+  min-width: 275px;
+}
+.login-form-container > form > .checkbox-container > label{
+    font-size:10px;
+}

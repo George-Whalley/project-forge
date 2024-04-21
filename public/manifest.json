@@ -1,0 +1,25 @@
+{
+  "short_name": "Forge",
+  "name": "The Forge Software Solutions",
+  "icons": [
+    {
+      "src": "images/logos/favicon-32x32.png",
+      "sizes": "32x32 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/logos/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "images/logos/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* Default Styling */
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+    font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Root Style Guide */
+:root{
+  /*
+  --primary:green;
+  --secondary: lightgreen;
+  */
+  --primary:#6D8BFF;
+  --secondary: #5469e0;
+  --font-family: 'Rubik', sans-serif;
+  --blue:blue;
+  --red:red;
+  --green: green;
+  --orange: orange;
+  --yellow: yellow;
+  --brown: brown;
+}
+
+/* Set the height of the HTML, BODY & ROOT to 100% */
+/* This means elements (header) can be controled by % */
+html, body, #root{
+  height:100%;
+  font-family: 'Rubik', sans-serif;
+
+}

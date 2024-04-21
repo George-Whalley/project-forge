@@ -1,0 +1,117 @@
+.header-container{
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    background-image: -webkit-linear-gradient(330deg, var(--primary) 60%, var(--secondary) 40%);
+    padding:15px 0;
+}
+
+.col{
+    margin: 0 10px;
+    display: flex;
+}
+
+.left{
+    float: left;
+    width: 70%;
+}
+
+.right{
+    float: right;
+    width: 30%;
+}
+
+.header-container > .col > h1{
+    font-size:1.5em;
+    color: white;
+}
+
+.header-container > .col > h2{
+    margin: auto 0 auto auto;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.header.menu {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.collapsed.header.menu{
+    display: none;
+}
+
+.header.menu > .menu-icon {
+    margin: auto 5px;
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--secondary);
+    justify-content: center;
+    display: flex;
+    border: 3px outset var(--primary);
+    border-radius: 12px;
+}
+
+.header.menu > .menu-icon:hover{
+    border: 3px inset var(--primary);
+}
+
+.collapsed.header.menu > .menu-icon{
+    font-size: 30px;
+    background-color: var(--secondary);
+    justify-content: center;
+    display: flex;
+    border: 3px outset var(--primary);
+    border-radius: 12px;
+}
+
+@media only screen and (max-width:400px) {
+    .uncollapsed.header.menu{
+        display: none;
+    }
+    .collapsed.header.menu{
+        display: flex;
+    }
+}
+.drop-down-menu{
+    border-top: 3px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+}
+.drop-down-menu > ul{
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    list-style-type: none;
+}
+.drop-down-menu > ul > li{
+    margin: 10px;
+    padding: 10px 5px;
+    text-align: center;
+    background-color: var(--primary);
+    border: 3px outset var(--secondary);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    
+}
+.drop-down-menu > ul > li:hover{
+   background:white;
+}
+@media only screen and (min-width:400px) {
+    .drop-down-menu{
+        display: none;
+    }
+}
+.menu-icon > a {
+    color:white;
+}
+
+.col.left > svg{
+    color:white;
+    font-size: 1.5em;
+    margin: auto 15px;
+}
