@@ -1,0 +1,98 @@
+.palceholder-picture{
+    background: var(--primary);
+    aspect-ratio: 1/1;
+    height: 14em;
+    margin: -120px auto auto auto;
+    border: 12px outset white;
+    display: flex;
+    border-radius: 100%;
+}
+.palceholder-picture > svg{
+    font-size: 90px;
+    color: var(--accent);
+    margin: auto;
+}
+.palceholder-picture-two{
+    background: var(--primary);
+    aspect-ratio: 1/1;
+    height: 14em;
+    margin: -120px auto 40px auto;
+    border: 12px outset white;
+    display: flex;
+    rotate: -6deg;
+}
+.palceholder-picture-two > svg{
+    font-size: 90px;
+    color: var(--accent);
+    margin: auto;
+}
+.page-container{
+    background: var(--primary);
+    height: 100%;
+    display: inline-table;
+    width: 100%;
+}
+.about-me.card{
+    background: white;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 25px auto;
+    border-radius: 8px;
+    height: fit-content;
+    max-width: 900px;
+    display: flow-root;
+}
+.card > .card-header{
+    background-color: var(--accent);
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 200px;
+}
+.card > p{
+    padding: 22px;
+  text-align: center;
+  margin: 0 auto 50px;
+  color: black;
+  line-height: 40px;
+  font-weight: bold;
+}
+.card > .fact-table{
+    width:100%;
+    text-align: center;
+    margin: 20px 0;
+}
+.fact-container{
+    margin: 10px 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.fact-container > div{
+    background-color: var(--secondary);
+    padding: 10px 15px;
+    margin: 10px auto;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 3px solid var(--primary);
+    text-align: center;
+    display: block ruby;
+    width:120px;
+    overflow: clip;
+}
+.card-header > h1{
+    color: white;
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-weight: bold;
+    font-size:50px;
+}
+.card > .accent-card{
+    background-color: var(--accent);
+    height: 200px;
+}
+
+
+

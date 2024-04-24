@@ -34,13 +34,13 @@ export default function Navbar(){
                 $("#drop-down-menu-ui").append('<li><a href="'+ menu_options_object[value].link +'">' + menu_options_object[value].name + '</about></li>')
             }
             // Change the styling of the button to inset (to show it is selected)
-            document.getElementById("collapsed-menu-button").style.border = "3px inset var(--primary)";
+            document.getElementById("collapsed-menu-button").style.border = "3px inset var(--accent)";
         }
         else{
             // Remove the drop down menu element
             document.getElementById("drop-down-menu").remove();
             // Change the styling of the button to outset (to show it is de-selected)
-            document.getElementById("collapsed-menu-button").style.border = "3px outset var(--primary)";
+            document.getElementById("collapsed-menu-button").style.border = "3px outset var(--accent)";
         }
 
     }

@@ -1,0 +1,93 @@
+.login-container-page{
+    height: 100%;
+    width: 100%;
+    display: inline-table;
+    background-color: var(--primary);
+}
+.login-card{
+  background: #e8e8e8;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 80px auto;
+  border-radius: 8px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 500px;
+  display: flow-root;
+}
+.palceholder-picture-login{
+  background: var(--secondary);
+  aspect-ratio: 1/1;
+  height: 8em;
+  margin: -80px auto auto auto;
+  border: 5px solid var(--accent);
+  display: flex;
+  border-radius: 100%;
+}
+.palceholder-picture-login > svg{
+  font-size: 60px;
+  color: white;
+  margin: auto;
+}
+.login-header-container{
+    background-color: var(--accent);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.input-container{
+  display: flex;
+}
+.input-container > svg{
+  margin: auto -54px auto auto;
+  background-color: var(--accent);
+  padding: 11px 11px;
+  color: white;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.input-container > input[type="text"],
+.input-container > input[type="password"]{
+    background-color: #c4c4c4;
+    padding: 8px 8px;
+    color: black;
+    display: flex;
+    margin: 20px auto;
+    border: none;
+    width: 70%;
+    min-width: 195px;
+    border-radius:4px;
+    font-size: 15px;
+    border-top: 2px solid #7b7b7b;
+    border-bottom: 2px solid #7b7b7b;
+    border-right: 2px solid #7b7b7b;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.login-form-container > form > input[type="submit"]{
+    background-color: var(--secondary);
+    padding: 8px 20px;
+    margin: 25px auto;
+    display: flex;
+    border: 3px outset var(--primary);
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+}
+.login-form-container > form > input[type="submit"]:hover{
+  border: 3px inset var(--primary);
+}
+.checkbox-container{
+  margin: 10px auto;
+  width: 70%;
+  min-width: 275px;
+}
+.login-form-container > form > .checkbox-container > label{
+  font-size:10px;
+}

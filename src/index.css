@@ -20,8 +20,9 @@ code {
   --primary:green;
   --secondary: lightgreen;
   */
-  --primary:#6D8BFF;
-  --secondary: #5469e0;
+  --primary: #262626;
+  --secondary: #2f2f2f;
+  --accent: #df592f;
   --font-family: 'Rubik', sans-serif;
   --blue:blue;
   --red:red;

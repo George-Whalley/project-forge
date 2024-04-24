@@ -1,12 +1,11 @@
 .footer-container{
     display: grid;
-    border-top:4px solid black;
+    border-top:6px solid var(--accent);
     background-color: var(--primary);
     background-image: -webkit-linear-gradient(330deg, var(--primary) 60%, var(--secondary) 40%);
     bottom: 0;
-    position: relative;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .main-footer-section{
@@ -20,7 +19,7 @@
     font-size:1.2em;
     font-weight: bold;
     margin: auto;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -29,7 +28,7 @@
     font-size:0.8em;
     margin: auto;
     padding: 20px 0;
-    color: black;
+    color: white;
 }
 
 .contact-details-container{
@@ -63,4 +62,10 @@
     font-size:1.5em;
     padding:2px;
     color:white
+}
+.footer-container > svg {
+    color:orange;
+    font-size:2.5em;
+    margin: auto;
+    padding: 5px 0 25px 0;
 }
