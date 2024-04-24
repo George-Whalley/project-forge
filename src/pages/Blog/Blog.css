@@ -1,0 +1,6 @@
+.container-page.blog{
+    height: 100%;
+    width: 100%;
+    display: inline-table;
+    background-color: var(--primary);
+}

@@ -7,7 +7,7 @@ import './navbar.css';
 // Get jQuery
 import $ from 'jquery';
 // Font Awesomes
-import { FaUser, FaHome, FaBookOpen, FaBars, FaProjectDiagram, FaAddressBook, FaFire, FaAddressCard } from 'react-icons/fa';
+import { FaUser, FaHome, FaBookOpen, FaBars, FaProjectDiagram, FaAddressBook, FaFire, FaAddressCard, FaHammer } from 'react-icons/fa';
 
 // Assemble function 
 export default function Navbar(){
@@ -15,7 +15,7 @@ export default function Navbar(){
     var menu_options_object = [
         {name:"Home", icon:<FaHome/>, link:"/"},
         {name:"About", icon: <FaAddressCard/>, link:"/about"},
-        {name:"Projects", icon:<FaProjectDiagram/>, link:"/projects"},
+        {name:"Blog", icon:<FaProjectDiagram/>, link:"/blog"},
         {name:"Contacts", icon:<FaAddressBook/>, link:"/contact"},
         {name:"Login", icon:<FaUser/>, link:"/login"}
     ];
@@ -55,7 +55,7 @@ export default function Navbar(){
     ]
 
     const uncollapsed_menu = menu_options_object.map((option) =>
-        <div className="menu-icon"><Link to={option.link}>{option.icon}</Link></div>
+        <div className="menu-icon"><Link to={option.link}>{option.name}</Link></div>
     );
 
     // Return Statement

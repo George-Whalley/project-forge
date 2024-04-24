@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Home from './pages/Home/Home';
-import Projects from './pages/Projects/Projects';
+import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Login from './pages/Login/Login';
@@ -20,7 +20,7 @@ function App() {
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/about" element={<About />} />
-                <Route exact path="/projects" element={<Projects />} />
+                <Route exact path="/Blog" element={<Blog />} />
                 <Route exact path="/contact" element={<Contact />} />
                 <Route exact path="/contact" element={<Contact />} />
                 <Route exact path="/login" element={<Login />} />

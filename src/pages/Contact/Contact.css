@@ -1,0 +1,44 @@
+
+.container-page.contact{
+    height: 100%;
+    width: 100%;
+    display: inline-table;
+    background-color: var(--primary);
+}
+.contact-me.card{
+    background: white;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 25px auto;
+    border-radius: 25px;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 900px;
+    display: flow-root;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contact-me.card > .card-header{
+    background-color: var(--accent);
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  height: 115px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contact-me.card > .card-header > .email-icon{
+    background: var(--primary);
+    aspect-ratio: 1/1;
+    height: 6em;
+    margin: auto;
+    border: 8px outset white;
+    display: flex;
+    border-radius: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contact-me.card > .card-header > .email-icon > svg{
+    font-size: 60px;
+    color: white;
+    margin: auto;
+}
