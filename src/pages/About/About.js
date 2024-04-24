@@ -23,7 +23,7 @@ function About(){
                 deserunt mollit anim id est laborum.</p>
                 <div className="fact-container">
                     <div>
-                        Development
+                        Developmentish
                     </div>
                     <div>
                         Anaylsis
