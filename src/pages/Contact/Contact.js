@@ -15,7 +15,7 @@ function Contact(){
                     </div>
                 </div>
                 <div className="main-container contact">
-                    <p>Contact Me!</p>
+                    <p>If you would like to contact me, fell out and send the form below!</p>
                 </div>
             </div>
         </div>

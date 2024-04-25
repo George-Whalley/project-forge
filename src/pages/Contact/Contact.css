@@ -42,3 +42,10 @@
     color: white;
     margin: auto;
 }
+.main-container.contact{
+    padding: 20px;
+  text-align: center;
+  color: black;
+  line-height: 20px;
+  font-weight: bold;
+}
