@@ -15,8 +15,8 @@ class Login extends Component {
     
     callAPI() {
         fetch("http://localhost:9000/runescape_apis")
-            .then(res => res.text())
-            .then(res => this.setState({ apiResponse: res }));
+            .then( res => res.text() )
+            .then( res => this.setState({ apiResponse: res }) );
     }
     
     componentWillMount() {
@@ -25,6 +25,8 @@ class Login extends Component {
 
     // Return statement
     render(){
+        // Dev statement
+        console.log(this.state.apiResponse);
         return(
             <div className='login-container-page'>
                 <div className='login-card'>
@@ -53,7 +55,6 @@ class Login extends Component {
                                 <label for="remember_me">Remember Me</label>
                             </div>
                         </form>
-                        <p className="App-intro">;{this.state.apiResponse}</p>
                     </div>
                 </div>
             </div>
@@ -61,4 +62,5 @@ class Login extends Component {
     }
 }
 
+// Export
 export default Login;
