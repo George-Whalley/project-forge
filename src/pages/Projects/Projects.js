@@ -17,38 +17,6 @@ class Runescape_Api_Data extends Component {
                         activites_data: [],
                         // Skills Data
                         skills_data: [],
-                        // Skills Dicitionary
-                        skills_dicitionary: [
-                            {id:0, skill: 'Attack'},
-                            {id:1, skill: 'Defence'},
-                            {id:2, skill: 'Strength'},
-                            {id:3, skill: 'Constitution'},
-                            {id:4, skill: 'Ranged'},
-                            {id:5, skill: 'Prayer'},
-                            {id:6, skill: 'Magic'},
-                            {id:7, skill: 'Cooking'},
-                            {id:8, skill: 'Woodcutting'},
-                            {id:9, skill: 'Fletching'},
-                            {id:10, skill: 'Fishing'},
-                            {id:11, skill: 'Firemaking'},
-                            {id:12, skill: 'Crafting'},
-                            {id:13, skill: 'Smithing'},
-                            {id:14, skill: 'Mining'},
-                            {id:15, skill: 'Herblore'},
-                            {id:16, skill: 'Agility'},
-                            {id:17, skill: 'Thieving'},
-                            {id:18, skill: 'Slayer'},
-                            {id:19, skill: 'Farming'},
-                            {id:20, skill: 'Runecrafting'},
-                            {id:21, skill: 'Hunter'},
-                            {id:22, skill: 'Construction'},
-                            {id:23, skill: 'Summoning'},
-                            {id:24, skill: 'Dungeoneering'},
-                            {id:25, skill: 'Divination'},
-                            {id:26, skill: 'Invention'},
-                            {id:27, skill: 'Archaeology'},
-                            {id:28, skill: 'Necromancy'},
-                        ]
                     };
     }
     
@@ -74,6 +42,38 @@ class Runescape_Api_Data extends Component {
                     activites_data: JSON.parse(res).activities,
                     // Set skills state
                     skills_data: JSON.parse(res).skillvalues,
+                    // Skills Dicitionary
+                    skills_dicitionary: [
+                        {id:0, skill: 'Attack'},
+                        {id:1, skill: 'Defence'},
+                        {id:2, skill: 'Strength'},
+                        {id:3, skill: 'Constitution'},
+                        {id:4, skill: 'Ranged'},
+                        {id:5, skill: 'Prayer'},
+                        {id:6, skill: 'Magic'},
+                        {id:7, skill: 'Cooking'},
+                        {id:8, skill: 'Woodcutting'},
+                        {id:9, skill: 'Fletching'},
+                        {id:10, skill: 'Fishing'},
+                        {id:11, skill: 'Firemaking'},
+                        {id:12, skill: 'Crafting'},
+                        {id:13, skill: 'Smithing'},
+                        {id:14, skill: 'Mining'},
+                        {id:15, skill: 'Herblore'},
+                        {id:16, skill: 'Agility'},
+                        {id:17, skill: 'Thieving'},
+                        {id:18, skill: 'Slayer'},
+                        {id:19, skill: 'Farming'},
+                        {id:20, skill: 'Runecrafting'},
+                        {id:21, skill: 'Hunter'},
+                        {id:22, skill: 'Construction'},
+                        {id:23, skill: 'Summoning'},
+                        {id:24, skill: 'Dungeoneering'},
+                        {id:25, skill: 'Divination'},
+                        {id:26, skill: 'Invention'},
+                        {id:27, skill: 'Archaeology'},
+                        {id:28, skill: 'Necromancy'},
+                    ]
                 }) 
             )
     }
@@ -83,93 +83,115 @@ class Runescape_Api_Data extends Component {
     }
 
     render(){
-        console.log(this.state.api_response);
-        console.log(this.state.skills_data);
+        // console.log(this.state.api_response);
+        // console.log(this.state.skills_data);
         return(
             <div>
-                <h1 className="runescape-api-headings">Summary Information</h1>
-                <div className = 'runescape-summary-data-container'>
-                    {this.state.summary_data.map(data => {
-                        // Map/loop through each data point in summary data
-                        return(
-                            // Return each data point as individual item
-                            <div className='runescape-summary-item'>
-                                <span>{data.name}:</span>
-                                <span>{data.value}</span>
-                            </div>
-                        )
-                    })}
-                </div>
-                <h1 className="runescape-api-headings" >Activity Information</h1>
-                <div className = 'runescape-activities-data-container'>
-                    {this.state.activites_data.map(data => {
-                        return(
-                            // Return each data point as individual item
-                            <div className='runescape-activities-item'>
-                                <span>{String(data.date).replace('-', ' ')}</span>
-                                <div>
-                                    <span>{data.text}<br/></span>
-                                    <span>{data.details}</span>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-                <h1 className="runescape-api-headings" >Skills</h1>
-                <div className = 'runescape-skills-data-container'>
-                    {this.state.skills_data.map(data => {
-                        // skill full name var
-                        var skill_full_name = "";
-                        // Loop through the skills dic
-                        {this.state.skills_dicitionary.map(dic_data => {
-                            // If the skills dic id matches the current skills_data id
-                            if(dic_data.id == data.id){
-                                // Set the skills full name var to be used later
-                                skill_full_name = dic_data.skill;
-                            }
-                        })}
-                        return(
-                             // Return each data point as individual item
-                             <div className='runescape-skills-item'>
-                                <span>{skill_full_name} </span>
-                                <span>{data.level} </span>
-                                <span>{data.xp} </span>
-                                <span>{data.rank} </span>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
-        )
-    }
-
-}
-
-
-class Project extends Component {
-    render(){
-        return(
-            <div className='container-page project'>
-                <div className='project-me card'>
-                    <div className='card-header'>
-                        <div className='email-icon'>
-                            <FaCode/>
+                <CollapseContainer 
+                    text={"Summary"} 
+                    init_collapse={false} 
+                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"2px solid var(--primary)"}} 
+                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
+                    body={
+                        <div className = 'runescape-summary-data-container'>
+                            {this.state.summary_data.map(data => {
+                                // Map/loop through each data point in summary data
+                                return(
+                                    // Return each data point as individual item
+                                    <div className='runescape-summary-item'>
+                                        <span>{data.name}:</span>
+                                        <span>{data.value}</span>
+                                    </div>
+                                )
+                            })}
                         </div>
-                    </div>
-                    <div className='main-container project'>
-                        <CollapseContainer text={"Runescape API's"} body={<Runescape_Api_Data/>}/>
-                    </div>  
-                </div>
+                    }
+                />
+                <CollapseContainer 
+                    text={"Activities"} 
+                    init_collapse={false} 
+                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"2px solid var(--primary)"}} 
+                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
+                    body={
+                        <div className = 'runescape-activities-data-container'>
+                            {this.state.activites_data.map(data => {
+                                return(
+                                    // Return each data point as individual item
+                                    <div className='runescape-activities-item'>
+                                        <div>
+                                            <div>
+                                                <span>{data.text}<br/></span>
+                                            </div>
+                                            <div>
+                                                <span>{data.details}</span>
+                                            </div>
+                                        </div>
+                                        <span>{String(data.date).replace('-', ' ')}</span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    }
+                />
+                <CollapseContainer 
+                    text={"Skills"} 
+                    init_collapse={false} 
+                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "", fontWeight:"bold",borderBottom:"2px solid var(--primary)"}} 
+                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
+                    body={
+                            <div className = 'runescape-skills-data-container'>
+                                {this.state.skills_data.map(data => {
+                                // skill full name var
+                                var skill_full_name = "";
+                                // Loop through the skills dic
+                                {this.state.skills_dicitionary.map(dic_data => {
+                                    // If the skills dic id matches the current skills_data id
+                                    if(dic_data.id == data.id){
+                                        // Set the skills full name var to be used later
+                                        skill_full_name = dic_data.skill;
+                                    }
+                                })}
+                                // Build the URL for the related icon
+                                var skill_icon = "/images/runescape_skills_icons/" + skill_full_name + "-icon.webp";
+                                console.log(skill_icon);
+                                return(
+                                    // Return each data point as individual item
+                                    <div className='runescape-skills-item'>
+                                        <div className='runescape-skills-item-header'>
+                                            <span><img src={skill_icon}/></span>
+                                            <span>{String(skill_full_name)} </span>
+                                        </div>
+                                        <div className='runescape-skills-item-body'>
+                                            <div>
+                                                <span>Level :</span>
+                                                <span>{data.level}</span>
+                                            </div>
+                                            <div>
+                                                <span>XP :</span>
+                                                <span>{String(data.xp).replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </span>
+                                            </div>
+                                            <div>
+                                                <span>Rank :</span>
+                                                <span>{String(data.rank).replace(/\B(?=(\d{3})+(?!\d))/g, ",")} </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    }
+                />
             </div>
         )
     }
 }
+
 class CollapseContainer extends React.Component {
     // Define var to decide when to show the container
     // If false = hide
     // If true = show
     state = {
-        toggle: false,
+        toggle: this.props.init_collapse,
     }
 
     // Function that changes the var above
@@ -187,16 +209,38 @@ class CollapseContainer extends React.Component {
     // State = Defined by developer
     // Props passed in on the class
     render() {
+        // Define the class name
         return (
             <div>
-                <div className='collapse-container-header runescape-apis' id='runescape-apis'>
-                    <button className='collapse-icon' id='runescape-apis-icon' onClick={() => this.ToggleButton()}>
+                <div className="collapse-container-header runescape-apis" style={this.props.header_style}>
+                    <button className='collapse-icon' onClick={() => this.ToggleButton()}>
                         {this.state.toggle === false ? <FaChevronUp/> : <FaChevronDown/>}
                     </button>
                     <p>{this.props.text}</p>
                 </div>
-                    {this.state.toggle === false ? <div className='collapse-container-body runescape-apis' id='runescape-apis-body'>
+                <div>
+                    {this.state.toggle === false ? <div className='collapse-container-body runescape-apis' style={this.props.body_style}>
                     {this.props.body}</div>:<></>}
+                </div>
+            </div>
+        )
+    }
+}
+
+class Project extends Component {
+    render(){
+        return(
+            <div className='container-page project'>
+                <div className='project-me card'>
+                    <div className='card-header'>
+                        <div className='email-icon'>
+                            <FaCode/>
+                        </div>
+                    </div>
+                    <div className='main-container project'>
+                        <CollapseContainer text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0"}} body={<Runescape_Api_Data/>}/>
+                    </div>  
+                </div>
             </div>
         )
     }
