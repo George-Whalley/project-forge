@@ -1,0 +1,167 @@
+
+.container-page.project{
+    height: 100%;
+    width: 100%;
+    display: inline-table;
+    background-color: var(--primary);
+}
+.project-me.card{
+    background: white;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 25px auto;
+    border-radius: 25px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flow-root;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project-me.card > .card-header{
+    background-color: var(--accent);
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 115px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project-me.card > .card-header > .email-icon{
+    background: var(--primary);
+    aspect-ratio: 1/1;
+    height: 6em;
+    margin: auto;
+    border: 8px outset white;
+    display: flex;
+    border-radius: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project-me.card > .card-header > .email-icon > svg{
+    font-size: 60px;
+    color: white;
+    margin: auto;
+}
+.main-container.project{
+    padding: 20px;
+    text-align: center;
+    color: black;
+    line-height: 20px;
+    font-weight: bold;
+}
+.collapse-container-header{
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+    display: flex;
+    padding: 5px 0;
+}
+.collapse-container-header > .collapse-icon {
+    font-size: 22px;
+    margin: auto 20px auto 0;
+    width: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+.collapse-container-body{
+    border:3px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.runescape-api-headings{
+    text-align: left;
+    margin: 5px 25px;
+    line-height: 50px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.runescape-summary-data-container{
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.runescape-summary-item{
+    margin: 10px 10px;
+    background-color: var(--accent);
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.runescape-summary-item > span:nth-child(2n+1){
+    margin: auto auto auto 0;
+    background: white;
+    padding: 4px 15px;
+    border-radius: 10px;
+}
+.runescape-summary-item > span:nth-child(2n){
+    margin: auto 0 auto auto;
+}
+
+.runescape-activities-data-container{
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+.runescape-activities-item{
+    margin: 10px 10px;
+    background-color: var(--accent);
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.runescape-activities-item > span{
+    margin: auto auto auto 0;
+    background: white;
+    padding: 4px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.runescape-activities-item > div {
+    margin: auto auto auto 0;
+    color: black;
+    padding: 4px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: right;
+    width: 100%;
+    font-size: 15px;
+}
+.runescape-activities-item > div >  span:nth-child(2n+1) {
+    font-weight: bold;
+    text-align: left;
+    text-decoration: underline;
+}
+.runescape-activities-item > div >  span:nth-child(2n) {
+    text-align: left;
+}
+
+
+
+
+@media only screen and (max-width: 450px) {
+    .runescape-activities-data-container{
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+    .runescape-activities-item{
+        display: block;
+    }
+    .runescape-activities-item > span{
+        width: 100%;
+        display: block;
+        padding: 4px 0;
+    }
+    .runescape-activities-item > div{
+        padding:0;
+        text-align: center;
+        margin: 15px 0;
+        font-size:15px;
+    }
+    .runescape-summary-data-container{
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+  }

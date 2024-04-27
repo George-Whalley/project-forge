@@ -17,7 +17,8 @@ export default function Navbar(){
         {name:"About", icon: <FaAddressCard/>, link:"/about"},
         {name:"Blog", icon:<FaProjectDiagram/>, link:"/blog"},
         {name:"Contacts", icon:<FaAddressBook/>, link:"/contact"},
-        {name:"Login", icon:<FaUser/>, link:"/login"}
+        {name:"Login", icon:<FaUser/>, link:"/login"},
+        {name:"Projects", icon:<FaUser/>, link:"/Projects"}
     ];
 
     // Open / Close Collapsed Drop Down Menu
