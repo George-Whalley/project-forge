@@ -90,7 +90,7 @@ class Runescape_Api_Data extends Component {
                 <CollapseContainer 
                     text={"Summary"} 
                     init_collapse={false} 
-                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"2px solid var(--primary)"}} 
+                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
                         <div className = 'runescape-summary-data-container'>
@@ -110,7 +110,7 @@ class Runescape_Api_Data extends Component {
                 <CollapseContainer 
                     text={"Activities"} 
                     init_collapse={false} 
-                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"2px solid var(--primary)"}} 
+                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
                         <div className = 'runescape-activities-data-container'>
@@ -136,7 +136,7 @@ class Runescape_Api_Data extends Component {
                 <CollapseContainer 
                     text={"Skills"} 
                     init_collapse={false} 
-                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "", fontWeight:"bold",borderBottom:"2px solid var(--primary)"}} 
+                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "", fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
                             <div className = 'runescape-skills-data-container'>
@@ -228,6 +228,7 @@ class CollapseContainer extends React.Component {
 }
 
 class Project extends Component {
+
     render(){
         return(
             <div className='container-page project'>
@@ -238,7 +239,111 @@ class Project extends Component {
                         </div>
                     </div>
                     <div className='main-container project'>
-                        <CollapseContainer text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0"}} body={<Runescape_Api_Data/>}/>
+                        <CollapseContainer text={"Runescape API's"}  init_collapse={true} body_style={{padding: "20px 0"}} body={<Runescape_Api_Data/>}/>
+                        <CollapseContainer text={"Sudoko Solver"}  init_collapse={false} body_style={{padding: "20px 0"}} body={
+                            <div className="sudoko-main">
+                                <div className="block-one sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1} />
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1} />
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <div className="block-two sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <div className="block-three sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <div className="block-four sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <div className="block-five sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <div className="block-six sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <div className="block-severn sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <div className="block-eight sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <div className="block-nine sudoko-block">
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                    <input type="text" className="sudoko-input-field" max="9" min="1" maxLength={1}/>
+                                </div>
+                                <input type="submit" value="Submit"/>
+                            </div>
+                        }/>
                     </div>  
                 </div>
             </div>
