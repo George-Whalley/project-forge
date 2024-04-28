@@ -1,0 +1,163 @@
+.runescape-player-name-form{
+  text-align: left;
+  padding: 30px 30px;
+}
+.runescape-player-name-form > input[type="text"]{
+    background: #e6e6e6;
+    border: 2px solid #8e8e8e;
+    padding: 10px 50px 10px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    margin: 0 25px 0 0;
+    text-align: left;
+}
+.runescape-player-name-form > input[type="submit"]{
+    background: var(--accent);
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin: 10px 0;
+}
+
+.runescape-summary-data-container{
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.runescape-summary-item{
+    margin: 10px 10px;
+    background-color: var(--accent);
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.runescape-summary-item > span:nth-child(2n+1){
+    margin: auto auto auto 0;
+    background: white;
+    padding: 4px 15px;
+    border-radius: 10px;
+}
+.runescape-summary-item > span:nth-child(2n){
+    margin: auto 0 auto auto;
+    font-weight:bold;
+}
+
+.runescape-activities-data-container{
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+.runescape-activities-item{
+    margin: 10px 10px;
+    background-color: var(--accent);
+    display: block;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.runescape-activities-item > span{
+    margin: auto auto auto 0;
+    padding: 4px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+}
+.runescape-activities-item > div {
+    margin: auto auto auto 0;
+    color: black;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: left;
+    width: 100%;
+    font-size: 15px;
+}
+.runescape-activities-item > div >  div:nth-child(2n+1) {
+    font-weight: bold;
+    text-align: center;
+    background: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.runescape-activities-item > div >  div:nth-child(2n) {
+    text-align: center;
+    background: #ffffff78;
+  border-radius: 10px;
+  margin: 8px 0;
+  padding: 20px 20px;
+}
+
+.runescape-skills-data-container{
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.runescape-skills-item{
+    margin: 10px 10px;
+  background-color: var(--accent);
+  display: block;
+  padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.runescape-skills-item-header{
+    background: white;
+  border-radius: 10px;
+  margin: 0 0 10px 0;
+  padding: 10px 0;
+  display: grid;
+  font-weight: bold;
+}
+.runescape-skills-item-body{
+    background: #ffffff78;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+    padding: 10px 0;
+}
+.runescape-skills-item-body > div{
+    margin: 10px 0;
+    display: flex;
+    padding: 0 30px;
+}
+.runescape-skills-item-body > div > span:nth-child(2n + 1){
+    margin: auto auto auto 0;
+}
+.runescape-skills-item-body > div > span:nth-child(2n){
+    margin: auto 0 auto auto;
+}
+.runescape_api_collapse_container{
+    background:pink;
+    margin: 10px auto 0 auto;
+    width: 90%;
+}
+
+
+
+@media only screen and (max-width: 450px) {
+    .runescape-activities-data-container{
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+    .runescape-activities-item{
+        display: block;
+    }
+    .runescape-activities-item > span{
+        width: 100%;
+        padding: 4px 0;
+    }
+    .runescape-activities-item > div{
+        padding:0;
+        text-align: center;
+        margin: 15px 0;
+        font-size:15px;
+    }
+    .runescape-summary-data-container{
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+    .runescape-activities-item > div {
+        width:100%;
+    }
+  }

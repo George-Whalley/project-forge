@@ -2,10 +2,21 @@
 var express = require('express'); // Express 
 var router = express.Router(); // Routing
 const https = require('https'); // API calls
+const player_name = "Raul";
+const get_url = 'https://apps.runescape.com/runemetrics/profile/profile?user=' + player_name + "&activities=20";
 
+router.get('/api/users', function(req, res) {
+  const user_id = req.query.player_name;
+  res.send({
+    'user_id': user_id,
+  });
+  get_url = 'https://apps.runescape.com/runemetrics/profile/profile?user=' + user_id + "&activities=20";
+});
+
+console.log(get_url)
 
 // GET RUNEMETRICS
-https.get('https://apps.runescape.com/runemetrics/profile/profile?user=Homados&activities=20', res => {
+https.get(get_url, res => {
   // Define data var to store response
   let data = [];
   // Set the header date / response data
@@ -28,6 +39,7 @@ https.get('https://apps.runescape.com/runemetrics/profile/profile?user=Homados&a
     //console.log(users);
     // On GET call made to the NODE JS URL
     router.get('/', function(req, res, next) {
+      const user_id = req.query.player_name;
       // Return Message
       res.json(users);
     });

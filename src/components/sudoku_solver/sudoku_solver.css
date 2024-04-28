@@ -1,0 +1,55 @@
+.sudoko-container{
+    border:1px solid black;
+    display: block;
+    margin: 10px auto;
+    padding: 20px;
+  }
+  .sudoko-main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 500px;
+    margin: auto;
+  }
+  .sudoko-block{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 150px;
+    margin: 4px auto;
+  }
+  .sudoko-input-field{
+    background-color: #e6e6e6;
+    border: 2px solid black;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    margin: 1px auto;
+    width: 40px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+  }
+  .sudoko-main > input[type=submit]{
+    background: var(--accent);
+    border-radius: 30px;
+    font-weight: bold;
+    margin: 20px auto 10px auto;
+    padding: 10px 30px;
+    border: none;
+    display: flex;
+    grid-column: 1 / -1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 550px) {
+    .sudoko-input-field{
+        width: 25px;
+      }
+      .sudoko-block{
+        width: 105px;
+      }
+      .sudoko-main{
+        width: 325px;
+      }
+  }

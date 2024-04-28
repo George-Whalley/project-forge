@@ -11,6 +11,7 @@ var indexRouter = require('./routes/index'); // Index API
 var testing_api = require("./routes/testing_api"); // Test API
 var mongo_db_testing_api = require("./routes/mongo_db_testing_api"); // Mongo DB API
 var runescapeRouter = require("./routes/runecape_apis"); // Runescape API
+var newrunescapeRouter = require("./routes/new_runescape_apis"); // Runescape API
 
 // CREATE APP
 var app = express(); // Define the express function as a API
@@ -30,6 +31,7 @@ app.use('/', indexRouter); // Index route
 app.use("/testing_api", testing_api); // Test API route
 app.use("/mongo_db_testing_api", mongo_db_testing_api); // Mongo DB route
 app.use("/runescape_apis", runescapeRouter); // Runescape route
+app.use("/new_runescape_apis", newrunescapeRouter); // New Runescape route
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
