@@ -2,4 +2,10 @@
   height: auto;
   font-family: 'Rubik', sans-serif;
 }
+.main-page-container{
+  height: 100%;
+  width: 100%;
+  display: inline-table;
+  background-color: var(--primary);
+}
 

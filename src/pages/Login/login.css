@@ -1,9 +1,3 @@
-.login-container-page{
-    height: 100%;
-    width: 100%;
-    display: inline-table;
-    background-color: var(--primary);
-}
 .login-card{
   background: #e8e8e8;
   width: 90%;

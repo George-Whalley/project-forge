@@ -1,6 +1,26 @@
-.container-page.blog{
+.header.blog{
+    background-color: var(--accent);
+    margin: 0;
+    padding: 10px 0
+}
+
+.header.blog > .email-icon{
+    background: var(--primary);
+    aspect-ratio: 1/1;
+    height: 6em;
+    margin: auto;
+    border: 8px outset white;
+    display: flex;
+    border-radius: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.header.blog > .email-icon > svg{
+    font-size: 60px;
+    color: white;
+    margin: auto;
+}
+.entries-container{
+    background: white;
     height: 100%;
-    width: 100%;
-    display: inline-table;
-    background-color: var(--primary);
+    padding: 20px 20px;
 }

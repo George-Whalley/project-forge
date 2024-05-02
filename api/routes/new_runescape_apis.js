@@ -12,8 +12,17 @@ const axios = require('axios'); // Note used in the end
 router.get('/', async function(req, res){
   // NOTE: req.query = query the request URL
   r_data = await getdata(req.query.player_name); // Get the runescape data from the get URL
-   // console.log('i: ' + r_data + ' end'); // Dev Statement
-  res.json(JSON.parse(r_data)); // The runescape data is returned in buffer format so rememebr to decode before returning
+  // If the error property is "NO_PROFILE"
+  // console.log(JSON.parse(r_data).error);
+  if(JSON.parse(r_data).error === "NO_PROFILE"){
+    res.status(208);
+    res.json(JSON.parse(r_data));
+  }
+  else{
+    // console.log(JSON.parse(r_data))
+    // console.log('i: ' + r_data + ' end'); // Dev Statement
+    res.json(JSON.parse(r_data)); // The runescape data is returned in buffer format so rememebr to decode before returning
+  }
 });
 // --------------------------------------------------------------------------------------------------------------------------
 

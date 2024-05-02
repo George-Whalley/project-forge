@@ -16,7 +16,7 @@ export default function create_footer(){
   return(
       <div className="footer-container">
         <FaFire />
-        <span className="footer-title">THANKYOU FOR VISTING <br /> PROJECT GJW</span>
+        <span className="footer-title">THANKYOU FOR VISTING <br /> PROJECT FORGE</span>
         <div className="copyright_statement_container">
           © George James Whalley {(new Date().getFullYear())}
         </div>

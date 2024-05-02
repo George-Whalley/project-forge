@@ -9,7 +9,7 @@ import { FaUser } from 'react-icons/fa';
 function About(){
     // Return
     return(
-        <div className='about-me page-container'>
+        <div className='main-page-container about-me'>
             <div className='about-me card'>
                 <div className='card-header'>
                     <h1>About Me!</h1>

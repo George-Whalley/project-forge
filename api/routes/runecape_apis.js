@@ -13,7 +13,7 @@ router.get('/api/users', function(req, res) {
   get_url = 'https://apps.runescape.com/runemetrics/profile/profile?user=' + user_id + "&activities=20";
 });
 
-console.log(get_url)
+// console.log(get_url)
 
 // GET RUNEMETRICS
 https.get(get_url, res => {

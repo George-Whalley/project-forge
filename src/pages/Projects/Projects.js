@@ -5,6 +5,7 @@ import './Projects.css';
 // Fetch Font awesomes required from libaray
 import { FaCode, FaChevronUp, FaChevronDown } from 'react-icons/fa';
 
+
 // COMPONENTS
 // Fetch Sudoku solver
 import Sudoku_solver from '../../components/sudoku_solver/sudoku_solver';
@@ -53,10 +54,9 @@ class CollapseContainer extends React.Component {
 }
 
 class Project extends Component {
-
     render(){
         return(
-            <div className='container-page project'>
+            <div className='main-page-container project'>
                 <div className='project-me card'>
                     <div className='card-header'>
                         <div className='email-icon'>
@@ -64,8 +64,8 @@ class Project extends Component {
                         </div>
                     </div>
                     <div className='main-container project'>
-                        <CollapseContainer text={"Runescape API's"}  init_collapse={true} body_style={{padding: "20px 0"}} body={<RUNESCAPE_API_DATA/>}/>
-                        <CollapseContainer text={"Sudoko Solver"}  init_collapse={false} body_style={{padding: "20px 0"}} body={
+                        <CollapseContainer text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0"}} body={<RUNESCAPE_API_DATA/>}/>
+                        <CollapseContainer text={"Sudoku Solver"}  init_collapse={false} body_style={{padding: "20px 0"}} body={
                             <Sudoku_solver/>
                         }/>
                     </div>  

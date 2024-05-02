@@ -1,5 +1,5 @@
 // Standard
-import React, {useState, Component} from 'react'
+import React, {useState, Component, Suspense} from 'react'
 // Link to stylesheet
 import './runescape_api_data.css';
 // Fetch Font awesomes required from libaray
@@ -10,7 +10,7 @@ class Runescape_Api_Data extends Component {
         super(props);
         this.state = {  
                         // Player Name requested
-                        player_name: "Homados",
+                        player_name: "",
                         // Runescape GET URL
                         // API Response in JSON
                         api_response: "",
@@ -24,78 +24,84 @@ class Runescape_Api_Data extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+
     // Create function to get API details
     get_runescape_details() {
         // Define the get URL
-        var get_url = "http://localhost:9000/new_runescape_apis?player_name=" + this.state.player_name;
+        var get_url = "http://localhost:9000/new_runescape_apis?player_name=" + this.state.player_name ;
         // Fetch the url
         fetch(get_url)
-        // Convert response to text
         .then( res => res.text() )
-        // Set the state values using the response
-        .then( res => this.setState({ 
-                // Convert response to JSON
-                api_response: JSON.parse(res),
-                // Set summary data state
-                summary_data: [
-                        {id: 1, name:"Player Name", value: JSON.parse(res).name},
-                        {id: 2, name:"Top Skill", value: JSON.parse(res).magic.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-                        {id: 3, name:"Total Skill", value: JSON.parse(res).totalskill.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-                        {id: 4, name:"Total XP", value: JSON.parse(res).totalxp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-                        {id: 5, name:"Quests Started", value: JSON.parse(res).questsstarted},
-                        {id: 6, name:"Quests Completed", value: JSON.parse(res).questscomplete},
-                        {id: 7, name:"Quested Not Started", value: JSON.parse(res).questsnotstarted},
-                ],
-                // Set activities state
-                activites_data: JSON.parse(res).activities,
-                // Set skills state
-                skills_data: JSON.parse(res).skillvalues,
-                // Skills Dicitionary
-                skills_dicitionary: [
-                    {id:0, skill: 'Attack'},
-                    {id:1, skill: 'Defence'},
-                    {id:2, skill: 'Strength'},
-                    {id:3, skill: 'Constitution'},
-                    {id:4, skill: 'Ranged'},
-                    {id:5, skill: 'Prayer'},
-                    {id:6, skill: 'Magic'},
-                    {id:7, skill: 'Cooking'},
-                    {id:8, skill: 'Woodcutting'},
-                    {id:9, skill: 'Fletching'},
-                    {id:10, skill: 'Fishing'},
-                    {id:11, skill: 'Firemaking'},
-                    {id:12, skill: 'Crafting'},
-                    {id:13, skill: 'Smithing'},
-                    {id:14, skill: 'Mining'},
-                    {id:15, skill: 'Herblore'},
-                    {id:16, skill: 'Agility'},
-                    {id:17, skill: 'Thieving'},
-                    {id:18, skill: 'Slayer'},
-                    {id:19, skill: 'Farming'},
-                    {id:20, skill: 'Runecrafting'},
-                    {id:21, skill: 'Hunter'},
-                    {id:22, skill: 'Construction'},
-                    {id:23, skill: 'Summoning'},
-                    {id:24, skill: 'Dungeoneering'},
-                    {id:25, skill: 'Divination'},
-                    {id:26, skill: 'Invention'},
-                    {id:27, skill: 'Archaeology'},
-                    {id:28, skill: 'Necromancy'},
-                ]
-            }) 
-        )
-
+        // Convert response to text
+        .then( res => {
+            console.log(JSON.parse(res))
+            if(JSON.parse(res).error === "NO_PROFILE") {
+                console.log('I am running')
+                // throw new Error(res.status);
+            }
+            else(
+                // .then( res => res.text() )
+                this.setState({ 
+                    // Convert response to JSON
+                    api_response: res,
+                    // Set summary data state
+                    summary_data: [
+                            {id: 1, name:"Player Name", value: JSON.parse(res).name},
+                            {id: 2, name:"Top Skill", value: JSON.parse(res).magic.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+                            {id: 3, name:"Total Skill", value: JSON.parse(res).totalskill.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+                            {id: 4, name:"Total XP", value: JSON.parse(res).totalxp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+                            {id: 5, name:"Quests Started", value: JSON.parse(res).questsstarted},
+                            {id: 6, name:"Quests Completed", value: JSON.parse(res).questscomplete},
+                            {id: 7, name:"Quested Not Started", value: JSON.parse(res).questsnotstarted},
+                    ],
+                    // Set activities state
+                    activites_data: JSON.parse(res).activities,
+                    // Set skills state
+                    skills_data: JSON.parse(res).skillvalues,
+                    // Skills Dicitionary
+                    skills_dicitionary: [
+                        {id:0, skill: 'Attack'},
+                        {id:1, skill: 'Defence'},
+                        {id:2, skill: 'Strength'},
+                        {id:3, skill: 'Constitution'},
+                        {id:4, skill: 'Ranged'},
+                        {id:5, skill: 'Prayer'},
+                        {id:6, skill: 'Magic'},
+                        {id:7, skill: 'Cooking'},
+                        {id:8, skill: 'Woodcutting'},
+                        {id:9, skill: 'Fletching'},
+                        {id:10, skill: 'Fishing'},
+                        {id:11, skill: 'Firemaking'},
+                        {id:12, skill: 'Crafting'},
+                        {id:13, skill: 'Smithing'},
+                        {id:14, skill: 'Mining'},
+                        {id:15, skill: 'Herblore'},
+                        {id:16, skill: 'Agility'},
+                        {id:17, skill: 'Thieving'},
+                        {id:18, skill: 'Slayer'},
+                        {id:19, skill: 'Farming'},
+                        {id:20, skill: 'Runecrafting'},
+                        {id:21, skill: 'Hunter'},
+                        {id:22, skill: 'Construction'},
+                        {id:23, skill: 'Summoning'},
+                        {id:24, skill: 'Dungeoneering'},
+                        {id:25, skill: 'Divination'},
+                        {id:26, skill: 'Invention'},
+                        {id:27, skill: 'Archaeology'},
+                        {id:28, skill: 'Necromancy'},
+                    ]
+                }) 
+            )
+        })
     }
+
+    onChange = (event) => this.setState({ player_name: event.target.value });
 
     handleSubmit(event){
         event.preventDefault();
-        this.setState({ player_name: this.player_name.value} )
-        this.get_runescape_details();
-        console.log(this.state.player_name)
-    }
-    
-    componentWillMount() {
-        this.get_runescape_details();
+        //this.setState({ value: event.target.value });
+        console.log(this.state.player_name);
+        this.get_runescape_details(this.state.player_name);
     }
 
     render(){
@@ -103,17 +109,20 @@ class Runescape_Api_Data extends Component {
         // console.log(this.state.skills_data);
         return(
             <div>
-                <CollapseContainer text={"Player Name"} init_collapse={false} header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
+                <CollapseContainer 
+                    text={"Player Name"} 
+                    init_collapse={true} 
+                    header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none"}} body={
                         <form onSubmit={this.handleSubmit} id="runescape-capture-player-name" className='runescape-player-name-form'>
-                            <input type='text' placeholder='- Enter Player Name -' ref={el => this.player_name = el} />
+                            <input type='text' placeholder='- Enter Player Name -' value={this.state.value} onChange={this.onChange} />
                             <input type="submit" value="Submit"/>
                         </form>
                     }
                 />
                 <CollapseContainer 
                     text={"Summary"} 
-                    init_collapse={false} 
+                    init_collapse={true} 
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
@@ -133,7 +142,7 @@ class Runescape_Api_Data extends Component {
                 />
                 <CollapseContainer 
                     text={"Activities"} 
-                    init_collapse={false} 
+                    init_collapse={true} 
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
@@ -159,7 +168,7 @@ class Runescape_Api_Data extends Component {
                 />
                 <CollapseContainer 
                     text={"Skills"} 
-                    init_collapse={false} 
+                    init_collapse={true} 
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "", fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={

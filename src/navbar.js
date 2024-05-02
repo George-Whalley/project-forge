@@ -16,10 +16,11 @@ export default function Navbar(){
         {name:"Home", icon:<FaHome/>, link:"/"},
         {name:"About", icon: <FaAddressCard/>, link:"/about"},
         {name:"Blog", icon:<FaProjectDiagram/>, link:"/blog"},
-        {name:"Contacts", icon:<FaAddressBook/>, link:"/contact"},
+        {name:"Projects", icon:<FaUser/>, link:"/Projects"},
         {name:"Login", icon:<FaUser/>, link:"/login"},
-        {name:"Projects", icon:<FaUser/>, link:"/Projects"}
     ];
+
+    // {name:"Contacts", icon:<FaAddressBook/>, link:"/contact"},
 
     // Open / Close Collapsed Drop Down Menu
     var toggle_collapsed_menu = () => {
@@ -63,7 +64,7 @@ export default function Navbar(){
     return(
         <div className='header-container'>
             <div className='col left'>
-                <FaFire />
+                <FaHammer />
                 <h1>
                     THE FORGE
                 </h1>
