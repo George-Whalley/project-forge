@@ -31,15 +31,17 @@
   }
   .sudoko-main > input[type=submit]{
     background: var(--accent);
-    border-radius: 30px;
-    font-weight: bold;
-    margin: 20px auto 10px auto;
-    padding: 10px 30px;
-    border: none;
+    padding: 8px 20px;
+    margin: 25px auto;
     display: flex;
-    grid-column: 1 / -1;
+    border: 3px outset var(--accent);
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
+    grid-column: 1 / -1;
   }
 
   @media only screen and (max-width: 550px) {

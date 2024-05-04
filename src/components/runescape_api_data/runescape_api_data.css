@@ -13,13 +13,15 @@
 }
 .runescape-player-name-form > input[type="submit"]{
     background: var(--accent);
-    border-radius: 30px;
+    padding: 5px 5px;
+    display: inline;
+    border: 3px outset var(--accent);
     font-weight: bold;
-    padding: 10px 30px;
-    border: none;
-    cursor: pointer;
     color: white;
-    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 .runescape-summary-data-container{
@@ -89,6 +91,7 @@
   border-radius: 10px;
   margin: 8px 0;
   padding: 20px 20px;
+  font-weight: 400;
 }
 
 .runescape-skills-data-container{

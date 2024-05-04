@@ -107,7 +107,7 @@ class Sudoku_solver extends Component {
         return(
             <form className="sudoko-main" onSubmit={this.handleSubmit}>
                 <Sudoku_block block_details={block_details} input_details={input_details}/>
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="Solve"/>
             </form>
         )
     }

@@ -55,6 +55,44 @@ router.post("/post-blog", (req, res) => {
     })
 })
 
+// Find Blog
+router.post('/find-blog', (req, res) => {
+    const {id} = req.body;
+    Blog.findById(id)
+    .then((result) => {
+        res.send(result)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
+
+// Update Blog
+router.post('/update-blog', async (req, res) => {
+    const {id, title, snippet, body} = req.body;
+    let doc = await Blog.findById(id)
+    await doc.updateOne({id:id, title:title, snippet:snippet, body:body})
+    .then((result) => {
+        res.send(result)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
+
+// Delete Blog
+router.post('/delete-blog', async (req, res) => {
+    const {id} = req.body;
+    const doc = Blog.deleteOne({_id: id})
+    .then((result) => {
+        res.send(result)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
+
+
 
 
 

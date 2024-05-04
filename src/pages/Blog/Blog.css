@@ -40,7 +40,8 @@
     font-weight: bold;
     font-size: 10px;
 }
-.post-entry-container{
+.post-entry-container,
+.edit-entry-container{
     height: 100%;
     padding: 20px 0;
     text-align: center;
@@ -50,12 +51,14 @@
     margin: 10px 10px;
     color: white;
 }
-.post-entry-container > form{
+.post-entry-container > form,
+.edit-entry-container > form{
     height: 100%;
     padding: 20px 20px;
     display: grid;
 }
-.post-entry-container > form > input, textarea{
+.post-entry-container > form > input, textarea,
+.edit-entry-container > form >  input, textarea, select{
     background: white;
     padding: 8px 8px;
     color: black;
@@ -67,9 +70,18 @@
     border: 2px solid var(--secondary);
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 20px auto;
 }
-.post-entry-container > form > input[type="submit"] {
+.post-entry-container > form > input,
+.edit-entry-container > form > input, select {
+    width: 200px;
+}
+.post-entry-container > form > textarea,
+.edit-entry-container > form > textarea  {
+    width: 90%;
+    height: 150px;
+}
+.post-entry-container > form > input[type="submit"],
+.edit-entry-container > form > input[type="submit"]{
     background: var(--accent);
     padding: 8px 20px;
     margin: 25px auto;
@@ -81,4 +93,20 @@
     font-size: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
+  }
+  .edit-find-object-selector-container{
+    display:flex;
+  }
+  .edit-find-object-selector-container > input[type="submit"]{
+    background: var(--accent);
+    padding: 0 10px;
+    margin: auto 0 auto 20px;
+    border: 3px outset var(--accent);
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    height: 30px;
   }
