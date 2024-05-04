@@ -38,6 +38,24 @@ router.get('/get-blogs', async function(req, res) {
     })
 });
 
+// Post Blog
+router.post("/post-blog", (req, res) => {
+    const {title, snippet, body} = req.body;
+    const blog = new Blog({
+        title: title,
+        snippet: snippet,
+        body: body
+    })
+    blog.save()
+    .then((result) => {
+        res.send(result)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
+
+
 
 
 module.exports = router;

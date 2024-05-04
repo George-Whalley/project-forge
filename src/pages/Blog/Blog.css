@@ -3,7 +3,6 @@
     margin: 0;
     padding: 10px 0
 }
-
 .header.blog > .email-icon{
     background: var(--primary);
     aspect-ratio: 1/1;
@@ -24,3 +23,62 @@
     height: 100%;
     padding: 20px 20px;
 }
+.main-blog-container > .blog-body-container{
+    background: #ddd;
+    padding: 30px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 0 20px;
+}
+.main-blog-container > .blog-body-container > .timestamp{
+    background: var(--accent);
+    padding: 10px 10px;
+    color: white;
+    margin: 15px 0px -15px auto;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+.post-entry-container{
+    height: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 10px;
+    color: white;
+}
+.post-entry-container > form{
+    height: 100%;
+    padding: 20px 20px;
+    display: grid;
+}
+.post-entry-container > form > input, textarea{
+    background: white;
+    padding: 8px 8px;
+    color: black;
+    display: flex;
+    margin: 20px -2px;
+    border: none;
+    border-radius:4px;
+    font-size: 15px;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px auto;
+}
+.post-entry-container > form > input[type="submit"] {
+    background: var(--accent);
+    padding: 8px 20px;
+    margin: 25px auto;
+    display: flex;
+    border: 3px outset var(--accent);
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }

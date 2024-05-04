@@ -1,5 +1,5 @@
 // Standard
-import React, {useState, Component, Suspense} from 'react'
+import React, {useState, Component, Suspense, useEffect} from 'react'
 // Link to stylesheet
 import './runescape_api_data.css';
 // Fetch Font awesomes required from libaray
@@ -20,6 +20,8 @@ class Runescape_Api_Data extends Component {
                         activites_data: [],
                         // Skills Data
                         skills_data: [],
+                        // Var to configure if the collapseable containers are oen or shut
+                        r_api_toggle: true
                     };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -29,79 +31,86 @@ class Runescape_Api_Data extends Component {
     get_runescape_details() {
         // Define the get URL
         var get_url = "http://localhost:9000/new_runescape_apis?player_name=" + this.state.player_name ;
-        // Fetch the url
-        fetch(get_url)
-        .then( res => res.text() )
-        // Convert response to text
-        .then( res => {
-            console.log(JSON.parse(res))
-            if(JSON.parse(res).error === "NO_PROFILE") {
-                console.log('I am running')
-                // throw new Error(res.status);
-            }
-            else(
-                // .then( res => res.text() )
-                this.setState({ 
-                    // Convert response to JSON
-                    api_response: res,
-                    // Set summary data state
-                    summary_data: [
-                            {id: 1, name:"Player Name", value: JSON.parse(res).name},
-                            {id: 2, name:"Top Skill", value: JSON.parse(res).magic.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-                            {id: 3, name:"Total Skill", value: JSON.parse(res).totalskill.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-                            {id: 4, name:"Total XP", value: JSON.parse(res).totalxp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-                            {id: 5, name:"Quests Started", value: JSON.parse(res).questsstarted},
-                            {id: 6, name:"Quests Completed", value: JSON.parse(res).questscomplete},
-                            {id: 7, name:"Quested Not Started", value: JSON.parse(res).questsnotstarted},
-                    ],
-                    // Set activities state
-                    activites_data: JSON.parse(res).activities,
-                    // Set skills state
-                    skills_data: JSON.parse(res).skillvalues,
-                    // Skills Dicitionary
-                    skills_dicitionary: [
-                        {id:0, skill: 'Attack'},
-                        {id:1, skill: 'Defence'},
-                        {id:2, skill: 'Strength'},
-                        {id:3, skill: 'Constitution'},
-                        {id:4, skill: 'Ranged'},
-                        {id:5, skill: 'Prayer'},
-                        {id:6, skill: 'Magic'},
-                        {id:7, skill: 'Cooking'},
-                        {id:8, skill: 'Woodcutting'},
-                        {id:9, skill: 'Fletching'},
-                        {id:10, skill: 'Fishing'},
-                        {id:11, skill: 'Firemaking'},
-                        {id:12, skill: 'Crafting'},
-                        {id:13, skill: 'Smithing'},
-                        {id:14, skill: 'Mining'},
-                        {id:15, skill: 'Herblore'},
-                        {id:16, skill: 'Agility'},
-                        {id:17, skill: 'Thieving'},
-                        {id:18, skill: 'Slayer'},
-                        {id:19, skill: 'Farming'},
-                        {id:20, skill: 'Runecrafting'},
-                        {id:21, skill: 'Hunter'},
-                        {id:22, skill: 'Construction'},
-                        {id:23, skill: 'Summoning'},
-                        {id:24, skill: 'Dungeoneering'},
-                        {id:25, skill: 'Divination'},
-                        {id:26, skill: 'Invention'},
-                        {id:27, skill: 'Archaeology'},
-                        {id:28, skill: 'Necromancy'},
-                    ]
-                }) 
-            )
-        })
+        const fetchData = async () => {
+            // Fetch the url
+            await fetch(get_url)
+            .then( res => res.text() )
+            // Convert response to text
+            .then( res => {
+                console.log(JSON.parse(res))
+                if(JSON.parse(res).error === "NO_PROFILE") {
+                    console.log('I am running')
+                    // throw new Error(res.status);
+                }
+                else(
+                    // .then( res => res.text() )
+                    this.setState({ 
+                        // Convert response to JSON
+                        api_response: res,
+                        // Set summary data state
+                        summary_data: [
+                                {id: 1, name:"Player Name", value: JSON.parse(res).name},
+                                {id: 2, name:"Top Skill", value: JSON.parse(res).magic.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+                                {id: 3, name:"Total Skill", value: JSON.parse(res).totalskill.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+                                {id: 4, name:"Total XP", value: JSON.parse(res).totalxp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+                                {id: 5, name:"Quests Started", value: JSON.parse(res).questsstarted},
+                                {id: 6, name:"Quests Completed", value: JSON.parse(res).questscomplete},
+                                {id: 7, name:"Quested Not Started", value: JSON.parse(res).questsnotstarted},
+                        ],
+                        // Set activities state
+                        activites_data: JSON.parse(res).activities,
+                        // Set skills state
+                        skills_data: JSON.parse(res).skillvalues,
+                        // Skills Dicitionary
+                        skills_dicitionary: [
+                            {id:0, skill: 'Attack'},
+                            {id:1, skill: 'Defence'},
+                            {id:2, skill: 'Strength'},
+                            {id:3, skill: 'Constitution'},
+                            {id:4, skill: 'Ranged'},
+                            {id:5, skill: 'Prayer'},
+                            {id:6, skill: 'Magic'},
+                            {id:7, skill: 'Cooking'},
+                            {id:8, skill: 'Woodcutting'},
+                            {id:9, skill: 'Fletching'},
+                            {id:10, skill: 'Fishing'},
+                            {id:11, skill: 'Firemaking'},
+                            {id:12, skill: 'Crafting'},
+                            {id:13, skill: 'Smithing'},
+                            {id:14, skill: 'Mining'},
+                            {id:15, skill: 'Herblore'},
+                            {id:16, skill: 'Agility'},
+                            {id:17, skill: 'Thieving'},
+                            {id:18, skill: 'Slayer'},
+                            {id:19, skill: 'Farming'},
+                            {id:20, skill: 'Runecrafting'},
+                            {id:21, skill: 'Hunter'},
+                            {id:22, skill: 'Construction'},
+                            {id:23, skill: 'Summoning'},
+                            {id:24, skill: 'Dungeoneering'},
+                            {id:25, skill: 'Divination'},
+                            {id:26, skill: 'Invention'},
+                            {id:27, skill: 'Archaeology'},
+                            {id:28, skill: 'Necromancy'},
+                        ],
+                        // Var to configure if the collapseable containers are oen or shut
+                        r_api_toggle: false
+                    }) 
+                )
+            })
+        }
+        fetchData();
+        
     }
 
     onChange = (event) => this.setState({ player_name: event.target.value });
 
-    handleSubmit(event){
+    async handleSubmit(event){
         event.preventDefault();
         //this.setState({ value: event.target.value });
         console.log(this.state.player_name);
         this.get_runescape_details(this.state.player_name);
+
     }
 
     render(){
@@ -111,7 +120,7 @@ class Runescape_Api_Data extends Component {
             <div>
                 <CollapseContainer 
                     text={"Player Name"} 
-                    init_collapse={true} 
+                    init_collapse={false}
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none"}} body={
                         <form onSubmit={this.handleSubmit} id="runescape-capture-player-name" className='runescape-player-name-form'>
@@ -122,7 +131,7 @@ class Runescape_Api_Data extends Component {
                 />
                 <CollapseContainer 
                     text={"Summary"} 
-                    init_collapse={true} 
+                    init_collapse={this.state.r_api_toggle}
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
@@ -142,7 +151,7 @@ class Runescape_Api_Data extends Component {
                 />
                 <CollapseContainer 
                     text={"Activities"} 
-                    init_collapse={true} 
+                    init_collapse={this.state.r_api_toggle}  
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
@@ -168,7 +177,7 @@ class Runescape_Api_Data extends Component {
                 />
                 <CollapseContainer 
                     text={"Skills"} 
-                    init_collapse={true} 
+                    init_collapse={this.state.r_api_toggle} 
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "", fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
