@@ -13,11 +13,11 @@ import { FaUser, FaHome, FaBookOpen, FaBars, FaProjectDiagram, FaAddressBook, Fa
 export default function Navbar(){
     // Create object to hold menu information
     var menu_options_object = [
-        {name:"Home", icon:<FaHome/>, link:"/"},
-        {name:"About", icon: <FaAddressCard/>, link:"/about"},
-        {name:"Blog", icon:<FaProjectDiagram/>, link:"/blog"},
-        {name:"Projects", icon:<FaUser/>, link:"/Projects"},
-        {name:"Login", icon:<FaUser/>, link:"/login"},
+        {name:"Home", icon:<FaHome/>, link:"/", key:"0"},
+        {name:"About", icon: <FaAddressCard/>, link:"/about",key:"1"},
+        {name:"Blog", icon:<FaProjectDiagram/>, link:"/blog",key:"2"},
+        {name:"Projects", icon:<FaUser/>, link:"/Projects",key:"3"},
+        {name:"Login", icon:<FaUser/>, link:"/login",key:"4"},
     ];
 
     // {name:"Contacts", icon:<FaAddressBook/>, link:"/contact"},
@@ -33,7 +33,7 @@ export default function Navbar(){
             // Loop through each item in menu options object
             for(let [value] of Object.entries(menu_options_object)){
                 // Insert list item into unordered list
-                $("#drop-down-menu-ui").append('<li><a href="'+ menu_options_object[value].link +'">' + menu_options_object[value].name + '</about></li>')
+                $("#drop-down-menu-ui").append('<li key="'+ menu_options_object[value].name +'"><a href="'+ menu_options_object[value].link +'">' + menu_options_object[value].name + '</a></li>')
             }
             // Change the styling of the button to inset (to show it is selected)
             document.getElementById("collapsed-menu-button").style.border = "3px inset var(--accent)";
@@ -57,7 +57,9 @@ export default function Navbar(){
     ]
 
     const uncollapsed_menu = menu_options_object.map((option) =>
-        <div className="menu-icon"><Link to={option.link}>{option.name}</Link></div>
+        <div className="menu-icon" key={option.key}>
+            <Link to={option.link}>{option.name}</Link>
+        </div>
     );
 
     // Return Statement
@@ -71,14 +73,12 @@ export default function Navbar(){
             </div>
             <div className='col right'>
                 <div className='uncollapsed header menu'>
-                    {uncollapsed_menu}
+                    {uncollapsed_menu }
                 </div>              
                {collapsed_menu}
             </div>
         </div>
     )
 }
-
-
 
 // export default Navbar;

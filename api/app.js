@@ -10,6 +10,7 @@ var r_index = require('./routes/index'); // Index API
 var r_runescape = require("./routes/runescape"); // Runescape API
 var r_blogs = require("./routes/blogs"); // Runescape API
 var r_users = require("./routes/users"); // Runescape API
+var r_sudoku = require("./routes/sudoku"); // Runescape API
 
 // CREATE APP
 var app = express(); // Define the express function as a API
@@ -29,6 +30,7 @@ app.use('/', r_index); // Index route
 app.use("/runescape", r_runescape); // New Runescape route
 app.use("/blogs", r_blogs); // Mongo DB Blog route
 app.use("/users", r_users); // Mongo DB User Route
+app.use("/sudoku", r_sudoku); // Mongo DB User Route
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

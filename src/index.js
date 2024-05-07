@@ -6,10 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import FOOTER from './components/footer/footer';
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+
+createRoot(
+  document.getElementById('root'))
+  .render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  )

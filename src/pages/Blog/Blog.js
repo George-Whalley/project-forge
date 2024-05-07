@@ -222,7 +222,7 @@ class Blog extends React.Component{
                                 <option id="1">- Select Blog -</option>
                                 {
                                 Object.keys(this.state.current_blogs_response).map((item, i) => (
-                                    <option value={this.state.current_blogs_response[item]._id}>{this.state.current_blogs_response[item].title}</option>
+                                    <option key={'a key'} value={this.state.current_blogs_response[item]._id}>{this.state.current_blogs_response[item].title}</option>
                                 ))
                                 }
                             </select>
@@ -254,6 +254,7 @@ class Blog extends React.Component{
                         // Where item is the postion in the array (0,1,2 or 3)
                         Object.keys(this.state.current_blogs_response).map((item, i) => (
                             <CollapseContainer 
+                                key={i}
                                 text={this.state.current_blogs_response[item].title + " - " + this.state.current_blogs_response[item].snippet}
                                 init_collapse={true} 
                                 container_style={{margin:"15px 0", boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}
