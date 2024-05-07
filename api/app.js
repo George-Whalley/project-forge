@@ -4,16 +4,12 @@ var path = require('path'); // Managing file directorys
 var cookieParser = require('cookie-parser'); // Access cookie data from the request header
 var logger = require('morgan'); // Middleware function and logging
 var cors = require("cors"); // Cross origin enable
-const https = require('https'); // HTTP commands
 
 // ROUTES (API's)
-var indexRouter = require('./routes/index'); // Index API
-var testing_api = require("./routes/testing_api"); // Test API
-var mongo_db_testing_api = require("./routes/mongo_db_testing_api"); // Mongo DB API
-var runescapeRouter = require("./routes/runecape_apis"); // Runescape API
-var newrunescapeRouter = require("./routes/new_runescape_apis"); // Runescape API
-var mongodb = require("./routes/mongodb"); // Runescape API
-var mongodb_users = require("./routes/mongodb_users"); // Runescape API
+var r_index = require('./routes/index'); // Index API
+var r_runescape = require("./routes/runescape"); // Runescape API
+var r_blogs = require("./routes/blogs"); // Runescape API
+var r_users = require("./routes/users"); // Runescape API
 
 // CREATE APP
 var app = express(); // Define the express function as a API
@@ -29,13 +25,10 @@ app.use(express.urlencoded({ extended: false })); // encoded URL disabled
 app.use(cookieParser()); // Check cookies
 app.use(express.static(path.join(__dirname, 'public'))); // Used to serve files
 
-app.use('/', indexRouter); // Index route
-app.use("/testing_api", testing_api); // Test API route
-app.use("/mongo_db_testing_api", mongo_db_testing_api); // Mongo DB route
-app.use("/runescape_apis", runescapeRouter); // Runescape route
-app.use("/new_runescape_apis", newrunescapeRouter); // New Runescape route
-app.use("/mongodb", mongodb); // Mongo DB Blog route
-app.use("/mongodb-user", mongodb_users); // Mongo DB User Route
+app.use('/', r_index); // Index route
+app.use("/runescape", r_runescape); // New Runescape route
+app.use("/blogs", r_blogs); // Mongo DB Blog route
+app.use("/users", r_users); // Mongo DB User Route
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

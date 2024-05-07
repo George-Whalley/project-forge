@@ -31,6 +31,7 @@ router.get('/', async function(req, res){
 // Passing in the data from the original get call from the react script
 // NOTE: async needs to be included before function declaration
 async function getdata(player_name){
+  console.log(player_name)
   get_url = 'https://apps.runescape.com/runemetrics/profile/profile?user=' + player_name + "&activities=20"; // Assemble the GET url, using the player name passed into the function
   // CREATE PROMISE (This needs to be completed before this function returns)
   let promise = new Promise((resolve, rejct) => {

@@ -27,7 +27,7 @@ class Login extends Component {
         // If the username and password have bee supplied
         if(this.state.username && this.state.password){
             // make post call to mongodb-user backend
-            axios.post('http://localhost:9000/mongodb-user', {
+            axios.post('http://localhost:9000/users', {
                 email: this.state.username, // Set the request email to the state username
                 password: this.state.password  // Set the reqeust password to the state password
             })

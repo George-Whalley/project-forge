@@ -38,7 +38,7 @@ class Blog extends React.Component{
     // -------------------------------------------------------------------------------------------------------
     getBlogs() {
         const fetchData = async () => { 
-            await fetch('http://localhost:9000/mongodb/get-blogs')
+            await fetch('http://localhost:9000/blogs/get-blogs')
             .then( res => res.text())
             .then(res => {
                 // Convert response to JSON object
@@ -82,7 +82,7 @@ class Blog extends React.Component{
         // console.log("Blog Snippet: " + this.state.create_blog.snippet)
         // console.log("Blog Body: " + this.state.create_blog.body)
         if(this.state.create_blog.title && this.state.create_blog.snippet && this.state.create_blog.body){
-            axios.post('http://localhost:9000/mongodb/post-blog', {
+            axios.post('http://localhost:9000/blogs/post-blog', {
                 title: this.state.create_blog.title,
                 snippet: this.state.create_blog.snippet, 
                 body: this.state.create_blog.body
@@ -126,7 +126,7 @@ class Blog extends React.Component{
     findObject = (event) =>{
         event.preventDefault()
         console.log([this.state.edit_blog.id])
-        axios.post('http://localhost:9000/mongodb/find-blog', {
+        axios.post('http://localhost:9000/blogs/find-blog', {
                 id: this.state.edit_blog.id,
             })
             .then(
@@ -159,7 +159,7 @@ class Blog extends React.Component{
         console.log(this.state.edit_blog.title)
         console.log(this.state.edit_blog.body)
         console.log(this.state.edit_blog.snippet)
-        axios.post('http://localhost:9000/mongodb/update-blog', {
+        axios.post('http://localhost:9000/blogs/update-blog', {
             id: this.state.edit_blog.id,
             title: this.state.edit_blog.title,
             snippet: this.state.edit_blog.snippet,
@@ -180,7 +180,7 @@ class Blog extends React.Component{
     deleteObject = (event) => {
         event.preventDefault()
         console.log(this.state.edit_blog.id)
-        axios.post('http://localhost:9000/mongodb/delete-blog', {
+        axios.post('http://localhost:9000/blogs/delete-blog', {
             id: this.state.edit_blog.id,
         })
         .then(

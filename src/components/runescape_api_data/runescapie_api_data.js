@@ -30,7 +30,7 @@ class Runescape_Api_Data extends Component {
     // Create function to get API details
     get_runescape_details() {
         // Define the get URL
-        var get_url = "http://localhost:9000/new_runescape_apis?player_name=" + this.state.player_name ;
+        var get_url = "http://localhost:9000/runescape?player_name=" + this.state.player_name ;
         const fetchData = async () => {
             // Fetch the url
             await fetch(get_url)
