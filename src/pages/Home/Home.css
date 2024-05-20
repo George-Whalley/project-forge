@@ -1,6 +1,43 @@
-.container-page.home{
+.main-page-container {
     height: 100%;
     width: 100%;
     display: inline-table;
     background-color: var(--primary);
+  }
+.header.home{
+    background-color: var(--accent);
+    margin: 0;
+    padding: 20vh 0;
+    text-align: center;
+}
+.header.home > h2{
+    color: white;
+    font-size: 4vw;
+    margin: 0;
+}
+.header.home > h1{
+    color: orange;
+    font-size: 9vw;
+    margin: 0;
+}
+.intro-card{
+    background-color: white;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4vh 0px;
+}
+.intro-card > div{
+    text-align: center;
+    display: flex;
+    
+}
+.intro-card > div > h3{
+    font-size: 5vw;
+    margin: auto;
+}
+.intro-card > div > img{
+    width: 80%;
+    height: 80%;
+    margin: auto;
 }
