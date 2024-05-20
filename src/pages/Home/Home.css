@@ -27,17 +27,16 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 4vh 0px;
 }
-.intro-card > div{
-    text-align: center;
-    display: flex;
-    
-}
 .intro-card > div > h3{
     font-size: 5vw;
     margin: auto;
 }
 .intro-card > div > img{
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     margin: auto;
+    display: block;
+}
+.intro-card > div > p{
+    font-size: 2vw;
 }
