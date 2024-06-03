@@ -91,6 +91,7 @@ function Home(){
             <div className='header home'>
                 <h2>WELCOME TO</h2>
                 <h1>THE FORGE</h1>
+                <img src="/images/logos/forge_gif.gif" style={{width:"100%"}}></img>
             </div>
             {
                 intro_cards.map((data, index) => {
