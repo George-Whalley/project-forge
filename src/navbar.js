@@ -7,7 +7,7 @@ import './navbar.css';
 // Get jQuery
 import $ from 'jquery';
 // Font Awesomes
-import { FaUser, FaHome, FaBookOpen, FaBars, FaProjectDiagram, FaAddressBook, FaFire, FaAddressCard, FaHammer } from 'react-icons/fa';
+import { FaUser, FaHome, FaBookOpen, FaBars, FaProjectDiagram, FaAddressBook, FaFire, FaAddressCard, FaHammer, FaWrench } from 'react-icons/fa';
 
 // Assemble function 
 export default function Navbar(){
@@ -66,7 +66,7 @@ export default function Navbar(){
     return(
         <div className='header-container'>
             <div className='col left'>
-                <FaHammer />
+                <FaWrench />
                 <h1>
                     THE FORGE
                 </h1>

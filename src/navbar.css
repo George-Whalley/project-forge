@@ -126,7 +126,8 @@
 }
 
 .col.left > svg{
-    color: orange;
-    font-size: 3em;
+    color: #c7c7c7;
+    font-size: 2em;
     margin: auto 15px;
+    rotate: -85deg;
 }

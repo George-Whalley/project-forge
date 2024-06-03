@@ -8,7 +8,7 @@ class SkillsBanner extends React.Component {
         return(
             <>
                 <div className='intro-card react' style={{padding:"40px 20px"}}>
-                    <div style={{textAlign:"left", padding: "0 0 0 2px"}}>
+                    <div style={{padding: "0 0 0 2px"}}>
                         <h3>{this.props.main_header} <br/><span style={{fontWeight:"lighter"}}> {this.props.sub_header}</span></h3>
                         <p>{this.props.blurb}</p>
                     </div>
@@ -44,7 +44,7 @@ function Home(){
         },
         {
             main_header: "GENIUS ",
-            sub_header: "Javascript",
+            sub_header: "JAVASCRIPT",
             blurb: "JavaScript (JS) is an object-oriented programming language that adheres to ECMA Script Standards and is commonly used to design the behavior of web pages",
             gif: "/images/external_logos/js_gif.gif",
         },
@@ -55,16 +55,40 @@ function Home(){
             gif: "/images/external_logos/mongodb_png.png",
         },
         {
-            main_header: "BESTOWED WITH ",
+            main_header: "CODE WITH ",
             sub_header: "NODE.JS",
             blurb: "MongoDB is a popular open-source NoSQL document database that stores data in flexible JSON-like documents rather than tables with a fixed schema like SQL databases. It makes it easy to store and query large volumes of unstructured or semi-structured data",
             gif: "/images/external_logos/node_png.png",
+        },
+        {
+            main_header: "STORED WITH ",
+            sub_header: "MySQL",
+            blurb: "MySQL is the world’s most popular open-source relational database management system (RDBMS). It enables users to store, manage, and retrieve structured data efficiently, supporting various applications from small-scale projects to large-scale websites and enterprise-level solutions",
+            gif: "/images/external_logos/mysql_png.png",
         },
         {
             main_header: "COMMITED WITH ",
             sub_header: "GITHUB",
             blurb: "GitHub is a cloud-based platform where you can store, share, and collaborate on code with others. It allows you to showcase your work, track changes to your code, and receive feedback from peers",
             gif: "/images/external_logos/github_png.png",
+        },
+        {
+            main_header: "COMPILED WITH ",
+            sub_header: "COPILOT (AI)",
+            blurb: "Microsoft Copilot is a conversational chat interface that lets you search for specific information, generate text such as emails and summaries, and create images based on text prompts you write. It can even write code in widely used computer languages like JavaScript, C, and Python",
+            gif: "/images/external_logos/copilot_png.png",
+        },
+        {
+            main_header: "SERVED WITH",
+            sub_header: "AMAZON WEB SERVICES",
+            blurb: "Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally. It provides scalable and cost-effective cloud computing solutions, allowing individuals, companies, and governments to access on-demand operations like compute power, database storage, content delivery, and more",
+            gif: "/images/external_logos/aws_png.png",
+        },
+        {
+            main_header: "CONTAINED WITH",
+            sub_header: "DOCKER",
+            blurb: "Docker is an open-source platform that enables developers to build, deploy, run, update, and manage containers—standardized, executable components that combine application source code with the operating system (OS) libraries and dependencies required to run that code in any environment.",
+            gif: "/images/external_logos/docker_png.png",
         },
     ]
 

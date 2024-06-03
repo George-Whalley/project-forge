@@ -26,12 +26,12 @@
 .intro-card:nth-child(n){
     background-color: white;
     flex-direction: row;
-
 }
 .intro-card:nth-child(2n){
     background-color: var(--secondary);
     color: white;
     flex-direction: row-reverse;
+    text-align: right;
 }
 .intro-card > div > h3{
     font-size: 5vw;
@@ -42,6 +42,7 @@
     height: auto;
     padding: 20px 20px;
     object-fit: contain;
+    max-width: 1000px;
 }
 .intro-card > div > p{
     font-size: 2vw;
