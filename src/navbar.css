@@ -73,7 +73,7 @@
     }
 }
 .drop-down-menu{
-    background-color: var(--accent);
+    background-color: white;
 }
 .drop-down-menu > ul{
     width: 80%;

@@ -3,35 +3,17 @@ import React from 'react'
 import './Home.css';
 import { FaWeight } from 'react-icons/fa';
 
-class SkillsBannerLeft extends React.Component {
+class SkillsBanner extends React.Component {
     render() {
         return(
             <>
-                <div className='intro-card react' style={{color:"white",backgroundColor:"var(--secondary)", padding:"40px 50px"}}>
-                    <div style={{textAlign:"left", padding: "0 0 0 50px"}}>
+                <div className='intro-card react' style={{padding:"40px 20px"}}>
+                    <div style={{textAlign:"left", padding: "0 0 0 2px"}}>
                         <h3>{this.props.main_header} <br/><span style={{fontWeight:"lighter"}}> {this.props.sub_header}</span></h3>
                         <p>{this.props.blurb}</p>
                     </div>
                     <div style={{display:"flex"}}>
                         <img src={this.props.gif}></img>
-                    </div>
-                </div>
-            </>
-        )
-    }
-}
-
-class SkillsBannerRight extends React.Component {
-    render() {
-        return(
-            <>
-                <div className='intro-card react'>
-                    <div style={{display:"flex"}}>
-                        <img src={this.props.gif}></img>
-                    </div>
-                    <div style={{textAlign:"right", padding:"0 50px 0 0"}}>
-                        <h3>{this.props.main_header} <br/><span style={{fontWeight:"lighter"}}> {this.props.sub_header}</span></h3>
-                        <p>{this.props.blurb}</p>
                     </div>
                 </div>
             </>
@@ -91,39 +73,20 @@ function Home(){
             <div className='header home'>
                 <h2>WELCOME TO</h2>
                 <h1>THE FORGE</h1>
-                <img src="/images/logos/forge_gif.gif" style={{width:"100%"}}></img>
             </div>
             {
                 intro_cards.map((data, index) => {
-                    // If index even
-                    if(index % 2 == 0){
-                        // Map/loop through each data point in summary data
-                        return(
-                            // Return each data point as individual item
-                            <SkillsBannerLeft
-                                main_header={data.main_header}
-                                sub_header={data.sub_header}
-                                blurb={data.blurb}
-                                gif={data.gif}
-                                card_styling={data.card_styling}
-                            
-                            />
-                        )
-                    }
-                    else{
-                        // Map/loop through each data point in summary data
-                        return(
-                            // Return each data point as individual item
-                            <SkillsBannerRight
-                                main_header={data.main_header}
-                                sub_header={data.sub_header}
-                                blurb={data.blurb}
-                                gif={data.gif}
-                                card_styling={data.card_styling}
-                            
-                            />
-                        )
-                    }
+                    return(
+                        // Return each data point as individual item
+                        <SkillsBanner
+                            main_header={data.main_header}
+                            sub_header={data.sub_header}
+                            blurb={data.blurb}
+                            gif={data.gif}
+                            card_styling={data.card_styling}
+                        
+                        />
+                    )
                 })
             }
         </div>

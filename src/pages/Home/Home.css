@@ -7,7 +7,7 @@
 .header.home{
     background-color: var(--accent);
     margin: 0;
-    padding: 20vh 0;
+    padding: 15vh 0;
     text-align: center;
 }
 .header.home > h2{
@@ -21,21 +21,27 @@
     margin: 0;
 }
 .intro-card{
+    display: flex;
+}
+.intro-card:nth-child(n){
     background-color: white;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 4vh 0px;
+    flex-direction: row;
+
+}
+.intro-card:nth-child(2n){
+    background-color: var(--secondary);
+    color: white;
+    flex-direction: row-reverse;
 }
 .intro-card > div > h3{
     font-size: 5vw;
     margin: auto;
 }
 .intro-card > div > img{
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+    object-fit: contain;
 }
 .intro-card > div > p{
     font-size: 2vw;
