@@ -7,7 +7,7 @@ import './navbar.css';
 // Get jQuery
 import $ from 'jquery';
 // Font Awesomes
-import { FaUser, FaHome, FaBookOpen, FaBars, FaProjectDiagram, FaAddressBook, FaFire, FaAddressCard, FaHammer, FaWrench } from 'react-icons/fa';
+import { FaUser, FaHome, FaBars, FaProjectDiagram, FaAddressCard, FaWrench } from 'react-icons/fa';
 
 // Assemble function 
 export default function Navbar(){
@@ -24,8 +24,6 @@ export default function Navbar(){
 
     // Open / Close Collapsed Drop Down Menu
     var toggle_collapsed_menu = () => {
-        // Get the main header element
-        var h = document.getElementsByClassName("header-container");
         // Check if the 'drop-down-menu' has already been added into the DOM
         if(document.body.contains(document.getElementById("drop-down-menu")) === false){
             // Insert a container after this element
@@ -56,8 +54,8 @@ export default function Navbar(){
         </div>
     ]
 
-    const uncollapsed_menu = menu_options_object.map((option) =>
-        <div className="menu-icon" key={option.key}>
+    const uncollapsed_menu = menu_options_object.map((option, index) =>
+        <div className="menu-icon" key={index}>
             <Link to={option.link}>{option.name}</Link>
         </div>
     );

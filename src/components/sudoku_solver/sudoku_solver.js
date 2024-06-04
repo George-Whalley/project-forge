@@ -1,5 +1,5 @@
 // Standard
-import React, {useState, Component} from 'react'
+import React, {Component} from 'react'
 // Link to stylesheet
 import './sudoku_solver.css';
 // Import Axios
@@ -30,7 +30,7 @@ const block_details = [
     "block_nine",
 ]
 
-class Sudoku_solver extends Component {
+class SUDOKU_SOLVER extends Component {
     // Define var to decide when to show the container
     // If false = hide
     // If true = show
@@ -96,12 +96,12 @@ class Sudoku_solver extends Component {
         return(
             <form className="sudoko-main">
                 {
-                block_details.map(block => (
-                <div className="block-one sudoko-block" id={block}>
+                block_details.map((block, block_index) => (
+                <div className="block-one sudoko-block" id={block} key={block_index}>
                     {
-                        input_details.map(input => (
-                            <div>
-                                <input id={block + "_box_" + input} type="text" className="sudoko-input-field" max="9" min="1" maxLength={1} value={this.state.value} onChange={this.updateInputs}  />
+                        input_details.map((input, input_index) => (
+                            <div key={input_index}>
+                                <input id={block + "_box_" + input} type="text" className="sudoko-input-field" max="9" min="1" maxLength={1} value={this.state.value} onChange={this.updateInputs}/>
                             </div>
                         ))
                     }
@@ -116,7 +116,7 @@ class Sudoku_solver extends Component {
 
 function Page(){
     return(
-    <Sudoku_solver />
+        <SUDOKU_SOLVER />
     )
 }
 

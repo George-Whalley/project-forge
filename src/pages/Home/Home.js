@@ -1,7 +1,6 @@
 import React from 'react'
 // Link to stylesheet
 import './Home.css';
-import { FaWeight } from 'react-icons/fa';
 
 class SkillsBanner extends React.Component {
     render() {
@@ -13,7 +12,7 @@ class SkillsBanner extends React.Component {
                         <p>{this.props.blurb}</p>
                     </div>
                     <div style={{display:"flex"}}>
-                        <img src={this.props.gif}></img>
+                        <img src={this.props.gif} alt="Home Page Logo"></img>
                     </div>
                 </div>
             </>
@@ -108,7 +107,7 @@ function Home(){
                             blurb={data.blurb}
                             gif={data.gif}
                             card_styling={data.card_styling}
-                        
+                            key={index}
                         />
                     )
                 })
