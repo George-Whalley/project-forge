@@ -4,7 +4,7 @@ import './Blog.css';
 // Date formating
 import Moment from 'moment';
 // Fetch Font awesomes required from libaray
-import { FaCode, FaChevronUp, FaChevronDown, FaBookOpen } from 'react-icons/fa';
+import { FaChevronUp, FaChevronDown, FaBookOpen } from 'react-icons/fa';
 // Import Axios
 import axios from 'axios'
 
@@ -201,7 +201,7 @@ class Blog extends React.Component{
         // Edit Blog HTML
         let edit_blog_entry = []
         // Check if there is a user logged in
-        if(this.state.user == "Admin"){
+        if(this.state.user === "Admin"){
             create_blog_entry = [
                 <div className="post-entry-container blog">
                     Submit A Blog

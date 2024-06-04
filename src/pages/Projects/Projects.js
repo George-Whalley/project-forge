@@ -1,5 +1,5 @@
 // Standard
-import React, {useState, Component} from 'react'
+import React, {Component} from 'react'
 // Link to stylesheet
 import './Projects.css';
 // Fetch Font awesomes required from libaray
@@ -7,12 +7,14 @@ import { FaCode, FaChevronUp, FaChevronDown } from 'react-icons/fa';
 
 
 // COMPONENTS
-// Fetch Sudoku solver
-import Sudoku_solver from '../../components/sudoku_solver/sudoku_solver';
-// Fetch Runescape API Data
+// Fetch SUDOKU SOLVER
+import SUDOKU_SOLVER from '../../components/sudoku_solver/sudoku_solver';
+// Fetch RUNESCAPE API DATA
 import RUNESCAPE_API_DATA from '../../components/runescape_api_data/runescapie_api_data';
+// Fetch TASK TRACKER
+import TASK_TRACKER from '../../components/task_tracker/task_tracker';
 
-class CollapseContainer extends React.Component {
+class COLLAPSE_CONTAINER extends React.Component {
     // Define var to decide when to show the container
     // If false = hide
     // If true = show
@@ -38,7 +40,7 @@ class CollapseContainer extends React.Component {
         // Define the class name
         return (
             <div>
-                <div className="collapse-container-header runescape-apis" style={this.props.header_style}>
+                <div className="collapse-container-header " style={this.props.header_style}>
                     <button className='collapse-icon' onClick={() => this.ToggleButton()}>
                         {this.state.toggle === false ? <FaChevronUp/> : <FaChevronDown/>}
                     </button>
@@ -53,7 +55,7 @@ class CollapseContainer extends React.Component {
     }
 }
 
-class Project extends Component {
+class PROJECT extends Component {
     render(){
         return(
             <div className='main-page-container project'>
@@ -64,9 +66,14 @@ class Project extends Component {
                         </div>
                     </div>
                     <div className='main-container project'>
-                        <CollapseContainer text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0"}} body={<RUNESCAPE_API_DATA/>}/>
-                        <CollapseContainer text={"Sudoku Solver"}  init_collapse={false} body_style={{padding: "20px 0"}} body={
-                            <Sudoku_solver/>
+                        <COLLAPSE_CONTAINER text={"Task List"} init_collapse={false} body_style={{padding: "20px 0"}} body={
+                            <TASK_TRACKER />
+                        }/>
+                        <COLLAPSE_CONTAINER text={"Runescape API's"}  init_collapse={true} body_style={{padding: "20px 0"}} body={
+                            <RUNESCAPE_API_DATA/>
+                        }/>
+                        <COLLAPSE_CONTAINER text={"Sudoku Solver"}  init_collapse={true} body_style={{padding: "20px 0"}} body={
+                            <SUDOKU_SOLVER/>
                         }/>
                     </div>  
                 </div>
@@ -75,4 +82,4 @@ class Project extends Component {
     }
 }
 
-export default Project;
+export default PROJECT;

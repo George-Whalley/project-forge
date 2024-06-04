@@ -37,12 +37,8 @@
 }
 .about-me.card{
     background: white;
-    width: 90%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 25px auto;
-    border-radius: 25px;
     height: fit-content;
-    max-width: 900px;
     display: flow-root;
 }
 .card > .card-header{
@@ -50,8 +46,6 @@
     color: white;
     padding: 20px 40px;
     text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
     height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -85,7 +79,6 @@
     border: 3px solid var(--primary);
     text-align: center;
     width:120px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 10px;
 }
 .card-header > h1{

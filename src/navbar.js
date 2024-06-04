@@ -24,6 +24,7 @@ export default function Navbar(){
 
     // Open / Close Collapsed Drop Down Menu
     var toggle_collapsed_menu = () => {
+
         // Check if the 'drop-down-menu' has already been added into the DOM
         if(document.body.contains(document.getElementById("drop-down-menu")) === false){
             // Insert a container after this element
@@ -64,10 +65,7 @@ export default function Navbar(){
     return(
         <div className='header-container'>
             <div className='col left'>
-                <FaWrench />
-                <h1>
-                    THE FORGE
-                </h1>
+                <img style={{height:'100px'}} src="images/chat_gpt_generated/the_forge_black_background_removed_png.png" alt='PROJECT FORGE'></img>
             </div>
             <div className='col right'>
                 <div className='uncollapsed header menu'>

@@ -1,9 +1,9 @@
 // Standard
-import React, {useState, Component, Suspense, useEffect} from 'react'
+import React, {Component} from 'react'
 // Link to stylesheet
 import './runescape_api_data.css';
 // Fetch Font awesomes required from libaray
-import { FaCode, FaChevronUp, FaChevronDown } from 'react-icons/fa';
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 
 class Runescape_Api_Data extends Component {
     constructor(props) {
@@ -136,11 +136,11 @@ class Runescape_Api_Data extends Component {
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
                         <div className = 'runescape-summary-data-container'>
-                            {this.state.summary_data.map(data => {
+                            {this.state.summary_data.map((data, index )=> {
                                 // Map/loop through each data point in summary data
                                 return(
                                     // Return each data point as individual item
-                                    <div className='runescape-summary-item'>
+                                    <div className='runescape-summary-item' key={index}>
                                         <span>{data.name}:</span>
                                         <span>{data.value}</span>
                                     </div>
@@ -156,10 +156,10 @@ class Runescape_Api_Data extends Component {
                     body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
                     body={
                         <div className = 'runescape-activities-data-container'>
-                            {this.state.activites_data.map(data => {
+                            {this.state.activites_data.map((data, index) => {
                                 return(
                                     // Return each data point as individual item
-                                    <div className='runescape-activities-item'>
+                                    <div className='runescape-activities-item' key={index}>
                                         <div>
                                             <div>
                                                 <span>{data.text}<br/></span>
@@ -186,20 +186,20 @@ class Runescape_Api_Data extends Component {
                                 // skill full name var
                                 var skill_full_name = "";
                                 // Loop through the skills dic
-                                {this.state.skills_dicitionary.map(dic_data => {
+                                this.state.skills_dicitionary.map(dic_data => {
                                     // If the skills dic id matches the current skills_data id
-                                    if(dic_data.id == data.id){
+                                    if(dic_data.id === data.id){
                                         // Set the skills full name var to be used later
                                         skill_full_name = dic_data.skill;
                                     }
-                                })}
+                                })
                                 // Build the URL for the related icon
                                 var skill_icon = "/images/runescape_skills_icons/" + skill_full_name + "-icon.webp";
                                 return(
                                     // Return each data point as individual item
                                     <div className='runescape-skills-item'>
                                         <div className='runescape-skills-item-header'>
-                                            <span><img src={skill_icon}/></span>
+                                            <span><img src={skill_icon} alt={String(skill_full_name)}/></span>
                                             <span>{String(skill_full_name)} </span>
                                         </div>
                                         <div className='runescape-skills-item-body'>

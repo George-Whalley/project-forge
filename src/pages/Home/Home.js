@@ -66,10 +66,10 @@ function Home(){
             gif: "/images/external_logos/mysql_png.png",
         },
         {
-            main_header: "COMMITED WITH ",
-            sub_header: "GITHUB",
-            blurb: "GitHub is a cloud-based platform where you can store, share, and collaborate on code with others. It allows you to showcase your work, track changes to your code, and receive feedback from peers",
-            gif: "/images/external_logos/github_png.png",
+            main_header: "SERVED WITH",
+            sub_header: "AMAZON WEB SERVICES",
+            blurb: "Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally. It provides scalable and cost-effective cloud computing solutions, allowing individuals, companies, and governments to access on-demand operations like compute power, database storage, content delivery, and more",
+            gif: "/images/external_logos/aws_png.png",
         },
         {
             main_header: "COMPILED WITH ",
@@ -78,16 +78,22 @@ function Home(){
             gif: "/images/external_logos/copilot_png.png",
         },
         {
-            main_header: "SERVED WITH",
-            sub_header: "AMAZON WEB SERVICES",
-            blurb: "Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally. It provides scalable and cost-effective cloud computing solutions, allowing individuals, companies, and governments to access on-demand operations like compute power, database storage, content delivery, and more",
-            gif: "/images/external_logos/aws_png.png",
+            main_header: "COMPUTED",
+            sub_header: "CHAT GPT (AI)",
+            blurb: "ChatGPT is an AI language model developed by OpenAI, designed to understand and generate human-like text based on the input it receives. It can assist with a wide range of tasks, from answering questions and providing explanations to generating creative content and engaging in conversations.",
+            gif: "/images/external_logos/chatgpt_png.png",
         },
         {
-            main_header: "CONTAINED WITH",
-            sub_header: "DOCKER",
-            blurb: "Docker is an open-source platform that enables developers to build, deploy, run, update, and manage containers—standardized, executable components that combine application source code with the operating system (OS) libraries and dependencies required to run that code in any environment.",
-            gif: "/images/external_logos/docker_png.png",
+            main_header: "COMMITED WITH ",
+            sub_header: "GITHUB",
+            blurb: "GitHub is a cloud-based platform where you can store, share, and collaborate on code with others. It allows you to showcase your work, track changes to your code, and receive feedback from peers",
+            gif: "/images/external_logos/github_png.png",
+        },
+        {
+            main_header: "HOSTED ON ",
+            sub_header: "UNBUNTU",
+            blurb: "Ubuntu is a popular open-source operating system based on the Linux kernel, known for its user-friendly interface and strong community support. It is widely used for both personal computers and servers, offering robust security features and a vast repository of software applications.",
+            gif: "/images/external_logos/unbuntu_png.png",
         },
     ]
 

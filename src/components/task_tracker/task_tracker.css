@@ -1,0 +1,52 @@
+.task-container{
+  margin: 20px 20px;
+  font-weight: bold;
+  color: black;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: var(--accent);
+  max-width:1000px;
+}
+.task-main-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+.task-name{
+    font-size: 20px;
+    margin: 10px 0 10px 35px;
+    color: black;
+    text-align: left;
+}
+.task-status{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 6px 35px;
+    color: black;
+    text-transform: uppercase;
+    margin: 0px 0 5px auto;
+    font-size: 12px;
+}
+.task-comment{
+    background: white;
+    color: black;
+    border-radius: 10px;
+    margin: 0 35px;
+    display: flex;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 12px;
+}
+.success{
+    background-color: green;
+    color: white;
+}
+.fail{
+    background-color: orange;
+    color: white;
+}
