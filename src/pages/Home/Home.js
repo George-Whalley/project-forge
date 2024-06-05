@@ -6,13 +6,15 @@ class SkillsBanner extends React.Component {
     render() {
         return(
             <>
-                <div className='intro-card react' style={{padding:"40px 20px"}}>
-                    <div style={{padding: "0 0 0 2px"}}>
-                        <h3>{this.props.main_header} <br/><span style={{fontWeight:"lighter"}}> {this.props.sub_header}</span></h3>
-                        <p>{this.props.blurb}</p>
-                    </div>
-                    <div style={{display:"flex"}}>
-                        <img src={this.props.gif} alt="Home Page Logo"></img>
+                <div className='intro-card react'>
+                    <div className='intro-sub-card'>
+                        <div>
+                            <h3>{this.props.main_header} <br/><span style={{fontWeight:"lighter"}}> {this.props.sub_header}</span></h3>
+                            <p>{this.props.blurb}</p>
+                        </div>
+                        <div style={{display:"flex"}}>
+                            <img src={this.props.gif} alt="Home Page Logo"></img>
+                        </div>
                     </div>
                 </div>
             </>
@@ -100,8 +102,8 @@ function Home(){
     return(
         <div className="main-page-container">
             <div className='header home'>
-                <h2>WELCOME TO</h2>
-                <h1>THE FORGE</h1>
+                <img src='/images/chat_gpt_generated/blacksmiths_home_page_webp.webp'></img>
+                <h1>WELCOME TO THE FORGE</h1>
             </div>
             {
                 intro_cards.map((data, index) => {

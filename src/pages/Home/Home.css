@@ -5,45 +5,59 @@
     background-color: var(--primary);
   }
 .header.home{
-    background-color: var(--accent);
-    margin: 0;
-    padding: 15vh 0;
+    background-color: var(--secondary);
+    position: relative;
     text-align: center;
 }
-.header.home > h2{
-    color: white;
-    font-size: 4vw;
-    margin: 0;
-}
 .header.home > h1{
-    color: orange;
-    font-size: 9vw;
-    margin: 0;
+    color: white;
+    font-size: 7vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
-.intro-card{
-    display: flex;
+.header.home > img{
+    width: 100%;
 }
 .intro-card:nth-child(n){
     background-color: white;
-    flex-direction: row;
+}
+.intro-card:nth-child(n) > .intro-sub-card{
+    background-color: white;
 }
 .intro-card:nth-child(2n){
+    background-color: var(--secondary);
+    flex-direction: row;
+}
+.intro-card:nth-child(2n) > .intro-sub-card{
     background-color: var(--secondary);
     color: white;
     flex-direction: row-reverse;
     text-align: right;
 }
-.intro-card > div > h3{
+.intro-card, .intro-sub-card{
+    display: flex;
+}
+.intro-card > .intro-sub-card > div > h3{
     font-size: 5vw;
     margin: auto;
 }
-.intro-card > div > img{
+.intro-card > .intro-sub-card > div > img{
     width: 100%;
     height: auto;
     padding: 20px 20px;
     object-fit: contain;
     max-width: 1000px;
 }
-.intro-card > div > p{
+.intro-card > .intro-sub-card > div > p{
     font-size: 2vw;
+}
+.intro-card > .intro-sub-card > div{
+    margin: auto;
+}
+.intro-sub-card{
+    margin: 60px;
 }

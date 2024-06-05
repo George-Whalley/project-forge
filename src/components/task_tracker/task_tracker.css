@@ -47,6 +47,7 @@
     color: white;
 }
 .fail{
-    background-color: orange;
+    background: rgb(249,144,0);
+    background: linear-gradient(274deg, rgba(249,144,0,1) 35%, rgba(255,181,80,1) 95%); 
     color: white;
 }

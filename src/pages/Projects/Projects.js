@@ -69,10 +69,10 @@ class PROJECT extends Component {
                         <COLLAPSE_CONTAINER text={"Task List"} init_collapse={false} body_style={{padding: "20px 0"}} body={
                             <TASK_TRACKER />
                         }/>
-                        <COLLAPSE_CONTAINER text={"Runescape API's"}  init_collapse={true} body_style={{padding: "20px 0"}} body={
+                        <COLLAPSE_CONTAINER text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0"}} body={
                             <RUNESCAPE_API_DATA/>
                         }/>
-                        <COLLAPSE_CONTAINER text={"Sudoku Solver"}  init_collapse={true} body_style={{padding: "20px 0"}} body={
+                        <COLLAPSE_CONTAINER text={"Sudoku Solver"}  init_collapse={false} body_style={{padding: "20px 0"}} body={
                             <SUDOKU_SOLVER/>
                         }/>
                     </div>  

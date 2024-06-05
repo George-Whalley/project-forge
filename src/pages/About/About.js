@@ -7,6 +7,8 @@ import { FaUser } from 'react-icons/fa';
 
 // Main
 function About(){
+    // Define a object to store the skills
+    const skills = ["Front End Development", "Backend Development", "Analysis", "Testing", "Product Management", "Communication", "Client Relationships", "Lending"]
     // Return
     return(
         <div className='main-page-container about-me'>
@@ -22,24 +24,9 @@ function About(){
                 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
                 deserunt mollit anim id est laborum.</p>
                 <div className="fact-container">
-                    <div>
-                        Developmentish
-                    </div>
-                    <div>
-                        Anaylsis
-                    </div>
-                    <div>
-                        Testing
-                    </div>
-                    <div>
-                        Product Management
-                    </div>
-                    <div>
-                        Communication
-                    </div>
-                    <div>
-                        Client Relationships
-                    </div>
+                    {skills.map((skill, index) =>
+                        <div key={index}>{skill}</div>
+                    )}
                 </div>
                 <div className='accent-card'>
                 </div>
