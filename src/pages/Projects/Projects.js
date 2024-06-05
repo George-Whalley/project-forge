@@ -13,6 +13,7 @@ import SUDOKU_SOLVER from '../../components/sudoku_solver/sudoku_solver';
 import RUNESCAPE_API_DATA from '../../components/runescape_api_data/runescapie_api_data';
 // Fetch TASK TRACKER
 import TASK_TRACKER from '../../components/task_tracker/task_tracker';
+import { BsDisplay } from 'react-icons/bs';
 
 class COLLAPSE_CONTAINER extends React.Component {
     // Define var to decide when to show the container
@@ -66,7 +67,7 @@ class PROJECT extends Component {
                         </div>
                     </div>
                     <div className='main-container project'>
-                        <COLLAPSE_CONTAINER text={"Task List"} init_collapse={false} body_style={{padding: "20px 0"}} body={
+                        <COLLAPSE_CONTAINER text={"Task List"} init_collapse={false} body_style={{padding: "20px 0", display:"flex", flexWrap:"wrap"}} body={
                             <TASK_TRACKER />
                         }/>
                         <COLLAPSE_CONTAINER text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0"}} body={

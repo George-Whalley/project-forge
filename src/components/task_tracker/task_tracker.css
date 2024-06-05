@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
+    height: 100%;
 }
 .task-name{
     font-size: 20px;
@@ -41,10 +42,11 @@
     text-transform: uppercase;
     text-align: left;
     font-size: 12px;
+    height: 100%;
 }
 .success{
-    background-color: green;
-    color: white;
+    background: rgb(0,150,5);
+    background: linear-gradient(322deg, rgba(0,150,5,1) 16%, rgba(0,193,6,1) 88%); 
 }
 .fail{
     background: rgb(249,144,0);

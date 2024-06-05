@@ -8,6 +8,13 @@ import { FaCheck } from 'react-icons/fa';
 // Set State
 const tasks = [
     {
+        name:"CHAT GPT",
+        icon: <FaCheck />,
+        icon_styling: "success",
+        status: "done", 
+        comments: "Subscribe to CHATGPT for use in the project, to generate images, text and to recommend code enhancements."
+    },
+    {
         name:"AUTHENTICATION",
         icon: <FaCheck />,
         icon_styling: "fail",
