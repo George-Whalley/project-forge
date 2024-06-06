@@ -48,6 +48,20 @@ const tasks = [
         icon_styling: "fail",
         status: "outstanding", 
         comments: "Buy book about AWS Server Hosting."
+    },
+    {
+        name:"NAVBAR",
+        icon: <FaCheck />,
+        icon_styling: "fail",
+        status: "outstanding", 
+        comments: "Re-write navbar code to use map function instead of for loop to render html elements and prevent warning messages on build."
+    },
+    {
+        name:"AUTOMATED TESTING",
+        icon: <FaCheck />,
+        icon_styling: "fail",
+        status: "outstanding", 
+        comments: "Explore and implment automated testing within the react js framework."
     }
 ]
 

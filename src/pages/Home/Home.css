@@ -25,27 +25,26 @@
 .intro-card:nth-child(n){
     background-color: white;
 }
-.intro-card:nth-child(n) > .intro-sub-card{
+.intro-card:nth-child(n) > .intro-sub-card {
     background-color: white;
 }
 .intro-card:nth-child(2n){
     background-color: var(--secondary);
-    flex-direction: row;
+    text-align: right;
 }
 .intro-card:nth-child(2n) > .intro-sub-card{
     background-color: var(--secondary);
     color: white;
-    flex-direction: row-reverse;
     text-align: right;
 }
 .intro-card, .intro-sub-card{
     display: flex;
 }
-.intro-card > .intro-sub-card > div > h3{
+.intro-card > .intro-sub-card > .top-container > div > h3{
     font-size: 5vw;
     margin: auto;
 }
-.intro-card > .intro-sub-card > div > img{
+.intro-card > .intro-sub-card > .top-container > div > img{
     width: 100%;
     height: auto;
     padding: 20px 20px;
@@ -60,4 +59,20 @@
 }
 .intro-sub-card{
     margin: 60px;
+}
+.intro-card:nth-child(n) > .intro-sub-card > .top-container {
+    display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  width: 100%;
+}
+.intro-card:nth-child(2n) > .intro-sub-card > .top-container {
+    display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+.intro-card > .intro-sub-card{
+    display: flex;
+    flex-direction: column;
 }

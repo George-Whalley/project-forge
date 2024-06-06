@@ -8,12 +8,16 @@ class SkillsBanner extends React.Component {
             <>
                 <div className='intro-card react'>
                     <div className='intro-sub-card'>
-                        <div>
-                            <h3>{this.props.main_header} <br/><span style={{fontWeight:"lighter"}}> {this.props.sub_header}</span></h3>
-                            <p>{this.props.blurb}</p>
+                        <div className='top-container'>
+                            <div>
+                                <h3>{this.props.main_header} <br/><span style={{fontWeight:"lighter"}}> {this.props.sub_header}</span></h3>
+                            </div>
+                            <div>
+                                <img src={this.props.gif} alt="Home Page Logo"></img>
+                            </div>
                         </div>
                         <div style={{display:"flex"}}>
-                            <img src={this.props.gif} alt="Home Page Logo"></img>
+                            <p>{this.props.blurb}</p>
                         </div>
                     </div>
                 </div>
