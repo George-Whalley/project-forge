@@ -256,7 +256,7 @@ class Blog extends React.Component{
                             <CollapseContainer 
                                 key={i}
                                 text={this.state.current_blogs_response[item].title + " - " + this.state.current_blogs_response[item].snippet}
-                                init_collapse={true} 
+                                init_collapse={false} 
                                 container_style={{margin:"15px 0", boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}
                                 header_style={{background:"var(--accent)",margin: "auto",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)",textTransform: "uppercase"}} 
                                 body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
@@ -311,7 +311,7 @@ class CollapseContainer extends React.Component {
                     </button>
                     <p>{this.props.text}</p>
                 </div>
-                <div>
+                <div style={{background:"white"}}>
                     {this.state.toggle === false ? <div className='collapse-container-body runescape-apis' style={this.props.body_style}>
                     {this.props.body}</div>:<></>}
                 </div>

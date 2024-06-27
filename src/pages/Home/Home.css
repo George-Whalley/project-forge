@@ -30,11 +30,13 @@
 }
 .intro-card:nth-child(2n){
     background-color: var(--secondary);
-    text-align: right;
 }
 .intro-card:nth-child(2n) > .intro-sub-card{
     background-color: var(--secondary);
     color: white;
+    text-align: left;
+}
+.intro-card:nth-child(2n + 1) > .intro-sub-card{
     text-align: right;
 }
 .intro-card, .intro-sub-card{
@@ -45,7 +47,7 @@
     margin: auto;
 }
 .intro-card > .intro-sub-card > .top-container > div > img{
-    width: 100%;
+    width: 50%;
     height: auto;
     padding: 20px 20px;
     object-fit: contain;

@@ -54,7 +54,7 @@ class Login extends Component {
             return  <Navigate to='/Projects' />;
         }
         return(
-            <div className='main-page-container login-page'>
+            <div className='main-page-container login-page' style={{backgroundImage:"url(/images/chat_gpt_generated/dark_background_circut_board.webp)"}}>
                 <div className='login-card'>
                     <div className='login-header-container'>
                     </div>

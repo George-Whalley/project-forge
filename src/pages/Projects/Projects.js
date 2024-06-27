@@ -12,7 +12,9 @@ import SUDOKU_SOLVER from '../../components/sudoku_solver/sudoku_solver';
 // Fetch RUNESCAPE API DATA
 import RUNESCAPE_API_DATA from '../../components/runescape_api_data/runescapie_api_data';
 // Fetch TASK TRACKER
-import TASK_TRACKER from '../../components/task_tracker/task_tracker';
+import TASK_TRACKER from '../../components/task_tracker/task_tracker'
+// Fetch CODE CHUNKS
+import CODE_CHUNK from '../../components/code_chunk/code_chunk';
 import { BsDisplay } from 'react-icons/bs';
 
 class COLLAPSE_CONTAINER extends React.Component {
@@ -67,15 +69,19 @@ class PROJECT extends Component {
                         </div>
                     </div>
                     <div className='main-container project'>
-                        <COLLAPSE_CONTAINER text={"Task List"} init_collapse={false} body_style={{padding: "20px 0", display:"flex", flexWrap:"wrap"}} body={
-                            <TASK_TRACKER />
+                        <COLLAPSE_CONTAINER text={"Task List"} init_collapse={false} body_style={{padding: "20px 0", display:"flex", flexWrap:"wrap", backgroundImage:"url(/images/chat_gpt_generated/code_background_picture.webp)",backgroundSize: "cover",backgroundPosition: "center center"}} body={
+                            <TASK_TRACKER/>
                         }/>
-                        <COLLAPSE_CONTAINER text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0"}} body={
+                        <COLLAPSE_CONTAINER text={"Code Bytes"}  init_collapse={false} body_style={{}} body={
+                            <CODE_CHUNK/>
+                        }/>
+                        <COLLAPSE_CONTAINER text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0", backgroundImage:"url(/images/chat_gpt_generated/runescape_background.webp)",backgroundSize: "cover",backgroundPosition: "center center"}} body={
                             <RUNESCAPE_API_DATA/>
                         }/>
-                        <COLLAPSE_CONTAINER text={"Sudoku Solver"}  init_collapse={false} body_style={{padding: "20px 0"}} body={
+                        <COLLAPSE_CONTAINER text={"Sudoku Solver"}  init_collapse={false} body_style={{padding: "20px 0", backgroundImage:"url(/images/chat_gpt_generated/doodle_page_of_maths.png)",backgroundSize: "cover",backgroundPosition: "center center"}} body={
                             <SUDOKU_SOLVER/>
                         }/>
+                        
                     </div>  
                 </div>
             </div>

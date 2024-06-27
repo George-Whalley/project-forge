@@ -39,7 +39,6 @@ class Runescape_Api_Data extends Component {
             .then( res => {
                 console.log(JSON.parse(res))
                 if(JSON.parse(res).error === "NO_PROFILE") {
-                    console.log('I am running')
                     // throw new Error(res.status);
                 }
                 else(
@@ -122,7 +121,7 @@ class Runescape_Api_Data extends Component {
                     text={"Player Name"} 
                     init_collapse={false}
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
-                    body_style={{width:"98%", margin:"auto", border:"none"}} body={
+                    body_style={{width:"98%", margin:"auto", border:"none", background:"#3535359e"}} body={
                         <form onSubmit={this.handleSubmit} id="runescape-capture-player-name" className='runescape-player-name-form'>
                             <input type='text' placeholder='- Enter Player Name -' value={this.state.value} onChange={this.onChange} />
                             <input type="submit" value="Submit"/>
@@ -133,7 +132,7 @@ class Runescape_Api_Data extends Component {
                     text={"Summary"} 
                     init_collapse={this.state.r_api_toggle}
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
-                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
+                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0", background:"#3535359e"}}
                     body={
                         <div className = 'runescape-summary-data-container'>
                             {this.state.summary_data.map((data, index )=> {
@@ -153,7 +152,7 @@ class Runescape_Api_Data extends Component {
                     text={"Activities"} 
                     init_collapse={this.state.r_api_toggle}  
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "",fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
-                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
+                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0", background:"#3535359e"}}
                     body={
                         <div className = 'runescape-activities-data-container'>
                             {this.state.activites_data.map((data, index) => {
@@ -179,7 +178,7 @@ class Runescape_Api_Data extends Component {
                     text={"Skills"} 
                     init_collapse={this.state.r_api_toggle} 
                     header_style={{background:"var(--accent)",margin: "auto",width: "98%",border: "", fontWeight:"bold",borderBottom:"4px solid var(--primary)"}} 
-                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0"}}
+                    body_style={{width:"98%", margin:"auto", border:"none", padding: "20px 0", background:"#3535359e"}}
                     body={
                             <div className = 'runescape-skills-data-container'>
                                 {this.state.skills_data.map(data => {
