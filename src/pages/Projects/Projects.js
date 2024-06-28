@@ -14,8 +14,9 @@ import RUNESCAPE_API_DATA from '../../components/runescape_api_data/runescapie_a
 // Fetch TASK TRACKER
 import TASK_TRACKER from '../../components/task_tracker/task_tracker'
 // Fetch CODE CHUNKS
-import CODE_CHUNK from '../../components/code_chunk/code_chunk';
-import { BsDisplay } from 'react-icons/bs';
+import CODE_CHUNK_SECTION from '../../components/code_chunk_section/code_chunk_section';
+// Fetch MOVIE WISHLIST SECTION
+import MOVIE_WISHLIST_SECTION from '../../components/movive_wishlist_section/movive_wishlist_section';
 
 class COLLAPSE_CONTAINER extends React.Component {
     // Define var to decide when to show the container
@@ -73,15 +74,17 @@ class PROJECT extends Component {
                             <TASK_TRACKER/>
                         }/>
                         <COLLAPSE_CONTAINER text={"Code Bytes"}  init_collapse={false} body_style={{}} body={
-                            <CODE_CHUNK/>
-                        }/>
-                        <COLLAPSE_CONTAINER text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0", backgroundImage:"url(/images/chat_gpt_generated/runescape_background.webp)",backgroundSize: "cover",backgroundPosition: "center center"}} body={
-                            <RUNESCAPE_API_DATA/>
+                            <CODE_CHUNK_SECTION/>
                         }/>
                         <COLLAPSE_CONTAINER text={"Sudoku Solver"}  init_collapse={false} body_style={{padding: "20px 0", backgroundImage:"url(/images/chat_gpt_generated/doodle_page_of_maths.png)",backgroundSize: "cover",backgroundPosition: "center center"}} body={
                             <SUDOKU_SOLVER/>
                         }/>
-                        
+                        <COLLAPSE_CONTAINER text={"Movie & TV Wishlist"}  init_collapse={false} body_style={{}} body={
+                            <MOVIE_WISHLIST_SECTION/>
+                        }/>
+                        <COLLAPSE_CONTAINER text={"Runescape API's"}  init_collapse={false} body_style={{padding: "20px 0", backgroundImage:"url(/images/chat_gpt_generated/runescape_background.webp)",backgroundSize: "cover",backgroundPosition: "center center"}} body={
+                            <RUNESCAPE_API_DATA/>
+                        }/>
                     </div>  
                 </div>
             </div>

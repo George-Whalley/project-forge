@@ -65,7 +65,7 @@ export default function Navbar(){
     return(
         <div className='header-container'>
             <div className='col left'>
-                <img style={{height:'100px'}} src="images/chat_gpt_generated/the_forge_black_background_removed_png.png" alt='PROJECT FORGE'></img>
+                <img style={{height:'100px'}} src="images/logos/project_forge_logo_trans_bg.png" alt='PROJECT FORGE'></img>
             </div>
             <div className='col right'>
                 <div className='uncollapsed header menu'>

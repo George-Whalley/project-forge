@@ -1,0 +1,6 @@
+.code-chunk-section{
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
