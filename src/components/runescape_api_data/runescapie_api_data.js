@@ -252,14 +252,14 @@ class CollapseContainer extends React.Component {
         // Define the class name
         return (
             <div>
-                <div className="collapse-container-header runescape-apis" style={this.props.header_style}>
+                <div className="collapse-container-header" style={this.props.header_style}>
                     <button className='collapse-icon' onClick={() => this.ToggleButton()}>
                         {this.state.toggle === false ? <FaChevronUp/> : <FaChevronDown/>}
                     </button>
                     <p>{this.props.text}</p>
                 </div>
                 <div>
-                    {this.state.toggle === false ? <div className='collapse-container-body runescape-apis' style={this.props.body_style}>
+                    {this.state.toggle === false ? <div className='collapse-container-body' style={this.props.body_style}>
                     {this.props.body}</div>:<></>}
                 </div>
             </div>
